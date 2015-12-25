@@ -41,11 +41,11 @@
 #### 3.数据类型对比
 * C语言数据类型
 
-![](file:/Users/John/Desktop/笔记图片/c数据类型.png =490x)
+![](file:///Users/John/Desktop/markdown_picture/1.png =490x)
 
 * OC数据类型
 
-![](file:/Users/John/Desktop/笔记图片/oc数据类型2.png =490x)
+![](file:///Users/John/Desktop/markdown_picture/oc数据类型2.png =490x)
 
 类型 | 描述
 ------------ | ------------
