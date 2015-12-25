@@ -41,11 +41,11 @@
 #### 3.数据类型对比
 * C语言数据类型
 
-![](file:///Users/John/Desktop/markdown_picture/1.png =490x)
+![](file:/Users/John/Desktop/图片笔记/c数据类型.png)
 
 * OC数据类型
 
-![](file:///Users/John/Desktop/markdown_picture/oc数据类型2.png =490x)
+![](file:/Users/John/Desktop/图片笔记/oc数据类型2.png )
 
 类型 | 描述
 ------------ | ------------
@@ -65,7 +65,7 @@ block | 代码快数据类型
 #### 4.流程控制语句对比
 * C语言中使用的流程控制语句OC中都可以应用
 
-```
+```objc
 if 语句
 switch 语句
 while 语句
@@ -77,14 +77,14 @@ continue 关键字
 * 增强for循环，用于快速迭代数组或者集合
 * C语言for循环
 
-```
+```objc
 for (int i = 0; i < 10; i++){
 	printf("%d", i);
 }
 ```
 *OC增强for循环
 
-```
+```objc
 for (NSString *name in NSArray){
 	NSLog(@"%@", name);
 }
@@ -105,7 +105,7 @@ for (NSString *name in NSArray){
 	
 
 	
-```
+```objc
 对象方法
 - (id)initWithString:(NSString *)name;
 类方法
@@ -117,7 +117,8 @@ for (NSString *name in NSArray){
 * 封装性
 * 继承性
 * 多态性
-![](file:/Users/John/Desktop/笔记图片/mxdx.png =490x)
+
+![](file:/Users/John/Desktop/图片笔记/mxdx.png)
 
 ***
 #### 7.面向对象新增语法
