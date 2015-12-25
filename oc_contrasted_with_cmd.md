@@ -34,7 +34,7 @@
 ```objc
     @interface @implementation @end
     @public @protected @private @selector
-    @protocol @optional @required 等
+    @protocol
     ```
        
 ***        
