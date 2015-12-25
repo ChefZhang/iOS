@@ -1,7 +1,7 @@
 # Summary
 
 * [OC基础](README.md)
-   * [Objective-C简介](01-00.md)
+   * [Objective-C简介](Day01-00.md)
        * [C和OC对比](01-01.md)
        * [第一个OC程序](2.md)
        * [面向对象思维](3.md)
