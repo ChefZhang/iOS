@@ -32,7 +32,7 @@
   
   例如
 ```objc
-    @interface @implementation、 @end
+    @interface @implementation @end
     @public @protected @private @selector
     @protocol @optional @required 等
     ```
