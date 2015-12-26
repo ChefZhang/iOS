@@ -37,7 +37,7 @@
 	
 ```objc
 NSLog(@“this is a test”); //打印一个字符串
-NSString *str = @"hello xiaomage!”;
+NSString *str = @"hello!”;
 NSLog(@"string is:%@",str);//使用占位符,%@表示打印一个对象,%@ OC特有的
 NSLog(@"x=%d, y=%d",10,20);//使用多个占位符,%d表示整型数
 ```
