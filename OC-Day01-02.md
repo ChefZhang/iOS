@@ -6,8 +6,8 @@
 3. NSLog和printf区别
 4. "@"的使用方法  
 5. NS前缀
-***
 
+***
 ### 1.如何创建Objective-C项目
 * 创建工程
 ![](file:/Users/John/Desktop/图片笔记/Snip20150512_3.png)
