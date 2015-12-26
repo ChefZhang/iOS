@@ -167,7 +167,7 @@ for (NSString *name in NSArray){
 	* @try ... @catch ... @finally
 * 示例
 
-```
+```objc
 // 创建对象car
 Car *car = [][Car alloc] init];
 @try{
