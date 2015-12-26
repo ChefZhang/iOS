@@ -11,5 +11,5 @@
 * [UI基础](UI.md)
    * [UI基础02](UI-Day02.md)
        * [UILabel](UI-Day02-01.md)
-       * UIImageView
+       * [UIImageView](UI-Day02-02.md)
 
