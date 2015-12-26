@@ -83,7 +83,7 @@ for (int i = 0; i < 10; i++){
 	printf("%d", i);
 }
 ```
-*OC增强for循环
+* OC增强for循环
 
 ```objc
 for (NSString *name in NSArray){
