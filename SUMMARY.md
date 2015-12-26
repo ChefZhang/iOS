@@ -7,5 +7,5 @@
        * [面向对象思维](OC-Day01-03.md)
        * [类与对象](OC-Day01-04.md)
        * [类的设计](OC-Day01-05.md)
-* [UI基础](UI-Day02.md)
+* [UI基础](UI-Day02-00.md)
 
