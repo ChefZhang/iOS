@@ -34,9 +34,9 @@
   例如
 ```objc
     @interface @implementation @end
-       @public @protected @private @selector
-       @protocol @optional @required 等
-       ```
+    @public @protected @private @selector
+    @protocol @optional @required 等
+```
        
 ***        
 ### 3.数据类型对比
