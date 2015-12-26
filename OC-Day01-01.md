@@ -147,7 +147,7 @@ for (NSString *name in NSArray){
 * 协议
 	* 使用协议声明方法
 	* 协议类似于C#,java中的接口
-```
+```objc
 @protocol MyProtocol
 - (void)myProtocolMethod;
 @end;
