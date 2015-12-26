@@ -89,3 +89,6 @@
     // 2.0 加到控制器的view中
     [self.view addSubview:imageView];
 ```    
+
+* 让图片具有毛玻璃昂效果
+
