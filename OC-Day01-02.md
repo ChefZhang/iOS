@@ -45,8 +45,9 @@ NSLog(@"x=%d, y=%d",10,20);//使用多个占位符,%d表示整型数
 * 在OC中"@"有特殊的用法
 	* "@"这个符号表示将一个C的字符串转化为OC中的字符串对象NSString
 	* OC中大部分的关键字都是以@开头的，比如@interface, @implemention, @end等
+
 ***
-#### 	5.NS前缀 
+#### 5.NS前缀 
 * NS来自于NeXTStep的一个软件 NeXT Software
 * OC中不支持命名空间(namespace)
 * NS是为了避免命名冲突而给的前缀
