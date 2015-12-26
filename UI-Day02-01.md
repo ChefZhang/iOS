@@ -60,7 +60,7 @@
     label.shadowOffset = CGSizeMake(-3, 4);
     label.shadowColor = [UIColor whiteColor];
     
-    // 1.9 设置行数(0:自动换行)
+    // 1.9 设置行数(0:自动换行)，如果行数设置为0，那么显示模式就失去了设置的意义
     label.numberOfLines = 0;
     
     // 1.10 显示模式
