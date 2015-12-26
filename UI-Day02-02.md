@@ -40,3 +40,52 @@
      UIViewContentModeBottomRight,
      */
 ```
+
+* 代码参考
+
+```objc
+    // 1.1 创建UIImageView对象
+    UIImageView *imageView = [[UIImageView alloc] init];
+    
+    // 1.2 设置frame
+    imageView.frame = CGRectMake(0, 0, 200, 300);
+    imageView.center = self.view.center;
+    
+    // 1.3 设置背景
+    imageView.backgroundColor = [UIColor yellowColor];
+    
+    // 1.4 设置图片 (png不需要后缀)
+    imageView.image = [UIImage imageNamed:@"kb"];
+    
+    
+    /**
+     
+     UIViewContentModeRedraw, // 重新绘制 (核心绘图) drawRact
+     
+     //带有Scale,标明图片有可能被拉伸或压缩
+     UIViewContentModeScaleToFill, // 完全的压缩或拉伸
+     
+     // Aspect 比例,缩放是带有比例的
+     UIViewContentModeScaleAspectFit, // 宽高比不变 Fit 适应，图片的高度达到imageView的高度
+     UIViewContentModeScaleAspectFill, // 宽高比不变 Fill 填充，图片的宽度达到imageView的宽度
+     
+     //不带有Scale,标明图片不可能被拉伸或压缩
+     UIViewContentModeCenter,
+     UIViewContentModeTop,
+     UIViewContentModeBottom,
+     UIViewContentModeLeft,
+     UIViewContentModeRight,
+     UIViewContentModeTopLeft,
+     UIViewContentModeTopRight,
+     UIViewContentModeBottomLeft,
+     UIViewContentModeBottomRight,
+     */
+    // 1.5 设置图片的内容模式
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    // 是否裁剪多余的部分
+//    imageView.clipsToBounds = YES;
+    
+    // 2.0 加到控制器的view中
+    [self.view addSubview:imageView];
+```    
