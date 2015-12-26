@@ -9,6 +9,6 @@
        * [类与对象](OC-Day01-04.md)
        * [类的设计](OC-Day01-05.md)
 * [UI基础](UI.md)
-   * [UI基础02](UI-Day02-01.md)
+   * [UI基础02](UI-Day02.md)
        * [UILabel](UI-Day02-02.md)
 
