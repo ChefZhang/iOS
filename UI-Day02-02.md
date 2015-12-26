@@ -92,3 +92,36 @@
 
 * 让图片具有毛玻璃昂效果
 
+```objc
+    // 让图片具有毛玻璃效果
+    // 1.创建UIImageView的对象
+    UIImageView *imageView = [[UIImageView alloc] init];
+    
+    // 2.设置尺寸，铺满整个屏幕
+    imageView.frame = self.view.bounds;
+    
+    // 3.设置图片
+    imageView.image = [UIImage imageNamed:@"kb"];
+    
+    // 4.设置图片样式
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    // 5.添加到视图中
+    [self.view addSubview:imageView];
+    
+    // 6.添加毛玻璃，需要的控件是UIToolBar
+    UIToolbar *toolBar = [[UIToolbar alloc] init];
+    
+    // 6.1设置尺寸
+    toolBar.frame = self.view.bounds;
+    
+    // 6.2毛玻璃的样式
+    /*
+     UIBarStyleDefault          = 0,
+     UIBarStyleBlack            = 1,
+     */
+    toolBar.barStyle = UIBarStyleBlack;
+    
+    // 6.3添加到iamgeView图层上
+    [imageView addSubview:toolBar];
+```    
