@@ -42,7 +42,7 @@
 ### 3.数据类型对比
 * C语言数据类型
 
-![](file:/Users/John/Desktop/图片笔记/c数据类型.png)
+![c数据类型.png](http://upload-images.jianshu.io/upload_images/328309-8765658e6ea9d6c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * OC数据类型
 
