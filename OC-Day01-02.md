@@ -10,10 +10,13 @@
 ***
 ### 1.如何创建Objective-C项目
 * 创建工程
-![](file:/Users/John/Desktop/图片笔记/Snip20150512_3.png)
-![](file:/Users/John/Desktop/图片笔记/Snip20150512_4.png)
-![](file:/Users/John/Desktop/图片笔记/Snip20151225_22.png)
-![](file:/Users/John/Desktop/图片笔记/Snip20151225_23.png)
+![创建工程1.png](http://upload-images.jianshu.io/upload_images/328309-19783f412de47ef2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![创建工程2.png](http://upload-images.jianshu.io/upload_images/328309-26067fdfc6d9955e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![创建工程3.png](http://upload-images.jianshu.io/upload_images/328309-654ae5603146c91f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![创建工程4.png](http://upload-images.jianshu.io/upload_images/328309-3a152b8f5f433692.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ***
 
