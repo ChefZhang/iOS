@@ -166,16 +166,16 @@ UIImageView不光可以加载图片，还能播放帧动画
         // 将图片添加到数组中
         [imageArr addObject:image];
     }
-    
+    // 为Main.storyboard中的UIImageView.animationImages赋值
     self.imageView.animationImages = imageArr;
     
     // 2.设置播放次数(1次)
-
     self.imageView.animationRepeatCount = 0;
     
     // 3.设置播放时间
 //    self.imageView.animationDuration = 1.f;
     
+    // 4.播放动画
     [self.imageView startAnimating];
     
     
