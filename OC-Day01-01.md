@@ -119,7 +119,7 @@ for (NSString *name in NSArray){
 * 继承性
 * 多态性
 
-![](file:/Users/John/Desktop/图片笔记/mxdx.png)
+![mxdx.png](http://upload-images.jianshu.io/upload_images/328309-37ebf984d1d47428.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ***
 ### 7.面向对象新增语法
