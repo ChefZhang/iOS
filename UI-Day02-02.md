@@ -123,7 +123,45 @@ UIImageView不光可以加载图片，还能播放帧动画
     NSMutableArray<UIImage *> *imageArr = [NSMutableArray array];
     // 此处的<UIImage *>是一个泛型，即要求imageArr中数组都是 UIImage对象
     for (int i = 0; i < 20; i++) {
-        /**
+        // 添加图片方式一：
+        // 需要添加图片的名称
+        NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
+        // 图片的文件路径
+        NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
+        // 创建图片
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        
+        /*
+         添加图片方式二：
+         UIImage *image = [UIImage imageNamed:filename];
+        */
+        
+        // 将图片添加到数组中
+        [imageArr addObject:image];
+    }
+    // 为Main.storyboard中的UIImageView.animationImages赋值
+    self.imageView.animationImages = imageArr;
+    
+    // 2.设置播放次数(1次)
+    self.imageView.animationRepeatCount = 0;
+    
+    // 3.设置播放时间
+//    self.imageView.animationDuration = 1.f;
+    
+    // 4.播放动画
+    [self.imageView startAnimating];
+    
+    // 5.释放内存
+    // 调用animationImages的setter方法，并赋值为空，设置延迟时间
+    [self.imageView performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:self.imageView.animationDuration];
+    
+}
+
+```
+
+### 知识点补充
+
+/**
          加载图片的方式:
          1. imageNamed:
          2. imageWithContentsOfFile:
@@ -155,33 +193,3 @@ UIImageView不光可以加载图片，还能播放帧动画
 //        NSString *path = [bundle pathForResource:filename ofType:nil];
         
 //        UIImage *image = [UIImage imageWithContentsOfFile:path];
-        
-        
-        // 需要添加图片的名称
-        NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
-        // 图片的文件路径
-        NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
-        // 创建图片
-        UIImage *image = [UIImage imageWithContentsOfFile:path];
-        // 将图片添加到数组中
-        [imageArr addObject:image];
-    }
-    // 为Main.storyboard中的UIImageView.animationImages赋值
-    self.imageView.animationImages = imageArr;
-    
-    // 2.设置播放次数(1次)
-    self.imageView.animationRepeatCount = 0;
-    
-    // 3.设置播放时间
-//    self.imageView.animationDuration = 1.f;
-    
-    // 4.播放动画
-    [self.imageView startAnimating];
-    
-    // 5.释放内存
-    // 调用animationImages的setter方法，并赋值为空，设置延迟时间
-    [self.imageView performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:self.imageView.animationDuration];
-    
-}
-
-```
