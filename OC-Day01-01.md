@@ -46,7 +46,7 @@
 
 * OC数据类型
 
-![](file:/Users/John/Desktop/图片笔记/oc数据类型2.png )
+![oc数据类型2.png](http://upload-images.jianshu.io/upload_images/328309-c5174734a85d68de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 类型 | 描述
 ------------ | ------------
