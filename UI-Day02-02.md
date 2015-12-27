@@ -57,7 +57,7 @@
     // 1.5 设置图片的内容模式
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     
-    // 是否裁剪多余的部分
+    // 是否裁剪多余的部分，这个要配合contentMode使用
 //    imageView.clipsToBounds = YES;
     
     // 2.0 加到控制器的view中
