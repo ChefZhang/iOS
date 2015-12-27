@@ -14,7 +14,9 @@
     * @property(nonatomic) NSInteger      animationRepeatCount; 
 动画的播放次数（默认是0，代表无限播放）
 
-* UIImageView继承自UIImage，其中有一个属性contentMode，是指图片显示的样式
+* UIImageView继承自UIImage
+    *  @interface UIImageView : UIView  
+* ，其中有一个属性contentMode，是指图片显示的样式
 
 
 * 代码参考
