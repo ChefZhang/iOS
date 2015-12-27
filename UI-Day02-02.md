@@ -178,11 +178,7 @@ UIImageView不光可以加载图片，还能播放帧动画
     // 4.播放动画
     [self.imageView startAnimating];
     
-    
-//    self.imageView.animationDuration = 1.0;
-//    CGFloat delay = self.imageView.animationDuration;
-    
-    // 4.释放内存
+    // 5.释放内存
     // 调用animationImages的setter方法，并赋值为空，设置延迟时间
     [self.imageView performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:self.imageView.animationDuration];
     
