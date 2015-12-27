@@ -102,6 +102,95 @@
 
 
 ## 2.UIImageView的常用方法
+UIImageView不光可以加载图片，还能播放帧动画 
+![lol巨魔.gif](http://upload-images.jianshu.io/upload_images/328309-5d230fd03842aa26.gif?imageMogr2/auto-orient/strip)
+
+听起来是不是很酷炫，那么完成这样就需要以下方法了
 * \- (void)startAnimating; // 开始动画
 * \- (void)stopAnimating; // 停止动画
 * \- (BOOL)isAnimating; // 是否正在执行动画
+
+看下demo吧
+
+* 注意：beginAnimation对应就是播放动画的按钮监听
+
+```objc
+- (IBAction)beginAnimation {
+    
+    // 3.这么写，还是有一个bug，就是连续点击“播放动画”按钮，画面会一直重复播放，改进办法
+//    if (self.imageView.isAnimating)
+//        return;
+    
+    
+    // 2.为什么创建数组要放在此处呢？ 因为当我不点击这个按钮的时候，我就不需要让动画加载进来，这样就可以节省内存了！
+    
+    // 1.要播放帧动画，就要创建一个数组
+    NSMutableArray<UIImage *> *imageArr = [NSMutableArray array];
+    for (int i = 0; i < 20; i++) {
+        
+        /**
+         加载图片的方式:
+         1. imageNamed:
+         2. imageWithContentsOfFile:
+         
+         1. 加载Assets.xcassets这里面的图片:
+         1> 打包后变成Assets.car
+         2> 拿不到路径
+         3> 只能通过imageNamed:来加载图片
+         4> 不能通过imageWithContentsOfFile:来加载图片
+         
+         2. 放到项目中的图片:
+         1> 可以拿到路径
+         2> 能通过imageNamed:来加载图片
+         3> 也能通过imageWithContentsOfFile:来加载图片
+         */
+        
+        // 5.如果用imageNamed: 有内存缓存，直到程序退出才释放
+        //        NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
+        //        UIImage *image = [UIImage imageNamed:imageName];
+        
+        // imageNamed: 有内存缓存直到程序退出才释放(传入文件名)
+        
+        // UIImage *image = [UIImage imageNamed:filename];
+        
+        // imageWithContentsOfFile: 没有缓存,自动释放(传入文件的全路径)
+        
+//        NSBundle *bundle = [NSBundle mainBundle];
+        
+//        NSString *path = [bundle pathForResource:filename ofType:nil];
+        
+//        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        
+        
+        // 6.换另一个方法
+        NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
+//        NSBundle *bundle = [NSBundle mainBundle];
+//        NSString *path = [bundle pathForResource:imageName ofType:@"png"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
+//        self.imageView.image = [UIImage imageWithContentsOfFile:path];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        [imageArr addObject:image];
+    }
+    
+    self.imageView.animationImages = imageArr;
+    
+    // 2.设置播放次数(1次)
+
+    self.imageView.animationRepeatCount = 0;
+    
+    // 3.设置播放时间
+//    self.imageView.animationDuration = 1.f;
+    
+    [self.imageView startAnimating];
+    
+    
+//    self.imageView.animationDuration = 1.0;
+//    CGFloat delay = self.imageView.animationDuration;
+    
+    // 4.释放内存
+    // 调用animationImages的setter方法，并赋值为空，设置延迟时间
+    [self.imageView performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:self.imageView.animationDuration];
+    
+}
+
+```
