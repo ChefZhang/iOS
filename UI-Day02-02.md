@@ -123,7 +123,6 @@ UIImageView不光可以加载图片，还能播放帧动画
     NSMutableArray<UIImage *> *imageArr = [NSMutableArray array];
     // 此处的<UIImage *>是一个泛型，即要求imageArr中数组都是 UIImage对象
     for (int i = 0; i < 20; i++) {
-        
         /**
          加载图片的方式:
          1. imageNamed:
@@ -158,13 +157,11 @@ UIImageView不光可以加载图片，还能播放帧动画
 //        UIImage *image = [UIImage imageWithContentsOfFile:path];
         
         
-        // 6.换另一个方法
+        // 需要添加的图片
         NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
-//        NSBundle *bundle = [NSBundle mainBundle];
-//        NSString *path = [bundle pathForResource:imageName ofType:@"png"];
         NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
-//        self.imageView.image = [UIImage imageWithContentsOfFile:path];
         UIImage *image = [UIImage imageWithContentsOfFile:path];
+        // 将图片添加到数组中
         [imageArr addObject:image];
     }
     
