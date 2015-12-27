@@ -157,8 +157,9 @@ UIImageView不光可以加载图片，还能播放帧动画
 //        UIImage *image = [UIImage imageWithContentsOfFile:path];
         
         
-        // 需要添加的图片
+        // 需要添加图片的名称
         NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
+        // 图片的文件路径
         NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
         UIImage *image = [UIImage imageWithContentsOfFile:path];
         // 将图片添加到数组中
