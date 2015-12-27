@@ -160,37 +160,37 @@ UIImageView不光可以加载图片，还能播放帧动画
 ```
 
 ### 知识点补充
-* 两种添加图片方式的
+* 两种添加图片方式的差别
 
-/**
-         加载图片的方式:
-         1. imageNamed:
-         2. imageWithContentsOfFile:
-         
-         1. 加载Assets.xcassets这里面的图片:
-         1> 打包后变成Assets.car
-         2> 拿不到路径
-         3> 只能通过imageNamed:来加载图片
-         4> 不能通过imageWithContentsOfFile:来加载图片
-         
-         2. 放到项目中的图片:
-         1> 可以拿到路径
-         2> 能通过imageNamed:来加载图片
-         3> 也能通过imageWithContentsOfFile:来加载图片
-         */
-        
-        // 5.如果用imageNamed: 有内存缓存，直到程序退出才释放
-        //        NSString *imageName = [NSString stringWithFormat:@"%d", i+1];
-        //        UIImage *image = [UIImage imageNamed:imageName];
-        
-        // imageNamed: 有内存缓存直到程序退出才释放(传入文件名)
-        
-        // UIImage *image = [UIImage imageNamed:filename];
-        
-        // imageWithContentsOfFile: 没有缓存,自动释放(传入文件的全路径)
-        
-//        NSBundle *bundle = [NSBundle mainBundle];
-        
-//        NSString *path = [bundle pathForResource:filename ofType:nil];
-        
-//        UIImage *image = [UIImage imageWithContentsOfFile:path];
+![Assets.xcassets.png](http://upload-images.jianshu.io/upload_images/328309-bb3b6f47a93bd6e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+上图为Assets.xcassets
+
+
+![项目中的文件.png](http://upload-images.jianshu.io/upload_images/328309-9af0a11e82e39498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+上图为项目中的图片
+* 注意：黄色的文件夹，在iOS项目中，其实是虚的，即所有文件都在同一级目录中，只有蓝色的文件夹，才有文件夹包含文件夹
+
+
+
+```objc
+    加载图片的方式:
+    
+    imageNamed:
+    1. 加载Assets.xcassets这里面的图片:
+    1> 打包后变成Assets.car
+    2> 拿不到路径
+    3> 只能通过imageNamed:来加载图片
+    4> 不能通过imageWithContentsOfFile:来加载图片
+    5> 有内存缓存，直到程序退出才释放
+     
+    2. imageWithContentsOfFile:     
+    2. 放到项目中的图片:
+    1> 可以拿到路径
+    2> 能通过imageNamed:来加载图片
+    3> 也能通过imageWithContentsOfFile:来加载图片
+    4> 没有缓存,自动释放(传入文件的全路径)
+    
+
+```
