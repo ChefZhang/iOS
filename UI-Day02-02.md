@@ -121,6 +121,7 @@ UIImageView不光可以加载图片，还能播放帧动画
     
     // 1.要播放帧动画，就要创建一个数组
     NSMutableArray<UIImage *> *imageArr = [NSMutableArray array];
+    // 此处的<UIImage *>是一个泛型，即要求imageArr中数组都是 UIImage对象
     for (int i = 0; i < 20; i++) {
         
         /**
