@@ -1,6 +1,6 @@
 # UIImageView
 
-## UIImageView的常用
+## UIImageView的常用属性
 * UIImageView极其常用，功能比较专一：显示图片
  
     * @property(nonatomic,retain) UIImage *image; 
@@ -19,8 +19,8 @@
     * @interface UIImageView : UIView  
     * 因此拥有图片显示模式的属性contentMode
 
-
-### 1. 添加图片
+### 小试牛刀
+* 添加图片
 
 ![添加图片.png](http://upload-images.jianshu.io/upload_images/328309-5b47c686f1002083.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -68,7 +68,7 @@
 ```    
 
 
-### 2. 让图片具有毛玻璃昂效果
+* 图片具有毛玻璃效果（应用场景：音乐播放软件）
 
 ![毛玻璃效果.png](http://upload-images.jianshu.io/upload_images/328309-3c90247fed93227b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
