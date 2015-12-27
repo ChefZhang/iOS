@@ -66,7 +66,9 @@
     [self.view addSubview:imageView];
 ```    
 
+
 2. 让图片具有毛玻璃昂效果
+
 ![毛玻璃效果.png](http://upload-images.jianshu.io/upload_images/328309-3c90247fed93227b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```objc
