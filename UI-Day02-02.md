@@ -1,6 +1,6 @@
 # UIImageView
 
-## UIImageView的常用属性
+## 1.UIImageView的常用属性
 * UIImageView极其常用，功能比较专一：显示图片
  
     * @property(nonatomic,retain) UIImage *image; 
@@ -101,7 +101,7 @@
 ```   
 
 
-UIImageView的常见方法
+## 2.UIImageView的常用方法
 * \- (void)startAnimating; // 开始动画
 * \- (void)stopAnimating; // 停止动画
 * \- (BOOL)isAnimating; // 是否正在执行动画
