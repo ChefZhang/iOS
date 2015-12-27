@@ -116,13 +116,8 @@ UIImageView不光可以加载图片，还能播放帧动画
 
 ```objc
 - (IBAction)beginAnimation {
-    
-    // 3.这么写，还是有一个bug，就是连续点击“播放动画”按钮，画面会一直重复播放，改进办法
-//    if (self.imageView.isAnimating)
-//        return;
-    
-    
-    // 2.为什么创建数组要放在此处呢？ 因为当我不点击这个按钮的时候，我就不需要让动画加载进来，这样就可以节省内存了！
+    // 2.为什么创建数组要放在此处而不是viewDidLoad中呢？
+    // 因为当我不点击这个按钮的时候，我就不需要让动画加载进来，这样就可以节省内存了！
     
     // 1.要播放帧动画，就要创建一个数组
     NSMutableArray<UIImage *> *imageArr = [NSMutableArray array];
