@@ -124,4 +124,10 @@
     
     // 6.3添加到iamgeView图层上
     [imageView addSubview:toolBar];
-```    
+```   
+
+
+UIImageView的常见方法
+* \- (void)startAnimating; // 开始动画
+* \- (void)stopAnimating; // 停止动画
+* \- (BOOL)isAnimating; // 是否正在执行动画
