@@ -172,7 +172,9 @@ UIImageView不光可以加载图片，还能播放帧动画
 上图为项目中的图片
 * 注意：黄色的文件夹，在iOS项目中，其实是虚的，即所有文件都在同一级目录中，只有蓝色的文件夹，才有文件夹包含文件夹
 
+![黄色文件夹.png](http://upload-images.jianshu.io/upload_images/328309-02dbf3587d7d4443.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+![蓝色文件夹.png](http://upload-images.jianshu.io/upload_images/328309-329691d7923b2f1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```objc
     加载图片的方式:
@@ -194,3 +196,4 @@ UIImageView不光可以加载图片，还能播放帧动画
     
 
 ```
+
