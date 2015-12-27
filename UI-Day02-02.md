@@ -1,5 +1,6 @@
 # UIImageView
 
+## UIImageView的常用
 * UIImageView极其常用，功能比较专一：显示图片
  
     * @property(nonatomic,retain) UIImage *image; 
@@ -71,7 +72,7 @@
 
 ![毛玻璃效果.png](http://upload-images.jianshu.io/upload_images/328309-3c90247fed93227b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-代码如下
+* 代码如下
 ```objc
     // 让图片具有毛玻璃效果
     // 1.创建UIImageView的对象
