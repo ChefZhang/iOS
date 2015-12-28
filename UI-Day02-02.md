@@ -232,7 +232,7 @@ UIImageView不光可以加载图片，还能播放帧动画
     
     self.imageView.animationImages = [self loadImages:@"dazhao" withImageCounts:87];
     [self playAnimation:5.3f withRepeatCount:1 andIsStand:NO];
-}
+ }
 ```
 
 
