@@ -13,6 +13,7 @@
        * [类方法的声明和实现](OC-Chp01-08.md)
        * [对象的存储细节](OC-Chp01-09.md)
        * [函数与方法对比](OC-Chp01-10.md)
+       * 常见错误
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
