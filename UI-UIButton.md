@@ -66,3 +66,15 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
 
 ```
 
+### 6.UIButton、UIImageView、UILabel的选择
+* UIButton
+    * 特点
+        *既能显示文字，又能显示图片（能显示2张图片，背景图片、内容图片）
+        *长按高亮的时候可以切换图片\文字
+        *直接通过addTarget...方法监听点击
+
+* UIImageView
+    * 能显示图片，不能直接通过addTarget...方法监听点击
+
+* UILabel
+    * 能显示文字，不能直接通过addTarget...方法监听点击
