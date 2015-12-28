@@ -16,6 +16,7 @@
        * [常见错误](OC-Chp01-11.md)
    * [OC-Chp2-Summary](OC-Chp2-Summary.md)
        * [NSString类介绍及用法](OC-Chp02-01.md)
+       * 结构体成员变量
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
