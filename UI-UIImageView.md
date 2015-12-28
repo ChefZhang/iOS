@@ -162,6 +162,7 @@ UIImageView不光可以加载图片，还能播放帧动画
 ### 知识点补充
 * 将文件拖入到项目中去
 ![添加文件.png](http://upload-images.jianshu.io/upload_images/328309-0010ab3eb7928ec7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+最后一个不勾选的话，文件资源就不会被打包到app中
 * 两种添加图片方式的差别
 
 ![Assets.xcassets.png](http://upload-images.jianshu.io/upload_images/328309-bb3b6f47a93bd6e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
