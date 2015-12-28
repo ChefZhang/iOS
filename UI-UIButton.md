@@ -101,3 +101,136 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
 
 * 关键点：有规律的创建白色按钮
 
+```objc
+ViewController.m文件中
+#import "ViewController.h"
+
+// 水平间距
+#define hMargin 30
+// 垂直间距
+#define vMargin 20
+// 购物车中按键的高和宽
+#define shopBtn 60
+
+
+
+@interface ViewController ()
+
+// 添加按钮
+@property (nonatomic, strong) UIButton *addBtn;
+// 删除按钮
+@property (nonatomic, strong) UIButton *delBtn;
+// 购物车视图
+@property (nonatomic, strong) UIView *shopCarView;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    // 1.创建添加按钮
+    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    addBtn.frame = CGRectMake(40, 100, 40, 40);
+    [addBtn setBackgroundImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
+    [addBtn setBackgroundImage:[UIImage imageNamed:@"add_highlighted"] forState:UIControlStateHighlighted];
+    [addBtn setBackgroundImage:[UIImage imageNamed:@"add_disabled"] forState:UIControlStateDisabled];
+    
+    // 将属性赋值给addBtn
+    self.addBtn = addBtn;
+    // 既然是按钮，那当然点击按钮之后能有操作了，那就运用播放音乐吧
+    /**
+     *  添加监听方法
+     *
+     *  addTarget: 监听对象，一般是填写self
+     *  actiong: 调用的方法
+     *  forControlEvents: 点击方式
+     */
+    //    [btn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>]
+    // 点击添加按钮的监听
+    [addBtn addTarget:self action:@selector(addBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    // 2.添加删除按钮
+    UIButton *delBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    delBtn.frame = CGRectMake(295, 100, 40, 40);
+    [delBtn setBackgroundImage:[UIImage imageNamed:@"remove"] forState:UIControlStateNormal];
+    [delBtn setBackgroundImage:[UIImage imageNamed:@"remove_highlighted"] forState:UIControlStateHighlighted];
+    [delBtn setBackgroundImage:[UIImage imageNamed:@"remove_disabled"] forState:UIControlStateDisabled];
+    // 初始的删除按钮要设置成Disabled
+    delBtn.enabled = NO;
+    
+    // 将属性赋值给delBtn
+    self.delBtn = delBtn;
+    // 点击删除按钮的监听
+    [delBtn addTarget:self action:@selector(delBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    // 3.添加一个view，可以放上其他的btn
+    UIView *view = [[UIView alloc] init];
+    view.frame = CGRectMake(40, 180, 295, 300);
+    view.backgroundColor = [UIColor purpleColor];
+    
+    // 将属性赋值给shopCarView
+    self.shopCarView = view;
+    
+    // 添加两个按钮，view到视图
+    [self.view addSubview:addBtn];
+    [self.view addSubview:delBtn];
+    [self.view addSubview:view];
+}
+
+// 点击添加按钮
+- (void)addBtnClick:(UIButton *)sender
+{
+    // 在哪一列
+    NSInteger rowTemp = self.shopCarView.subviews.count % 3;
+    // 在哪一行
+    NSInteger columnTemp = self.shopCarView.subviews.count / 3;
+    // 创建btn
+    UIButton *shopCarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    // 设置btn的颜色
+    shopCarBtn.backgroundColor = [UIColor whiteColor];
+    // 设置每个btn的frame
+    shopCarBtn.frame = CGRectMake((hMargin + (hMargin + shopBtn)*rowTemp), (vMargin + (vMargin+shopBtn)*columnTemp), shopBtn, shopBtn);
+    // 添加到shopCarView中
+    [self.shopCarView addSubview:shopCarBtn];
+    
+    // 当有六个按钮的时候，就不能再添加了
+    if (self.shopCarView.subviews.count == 6) {
+        self.addBtn.enabled = NO;
+    }
+    
+    // 恢复删除按钮的使用
+    self.delBtn.enabled = YES;
+}
+
+// 点击删除按钮
+- (void)delBtnClick:(UIButton *)sender
+{
+    // 删除视图中的最后一个
+    UIView *lastShopView = [self.shopCarView.subviews lastObject];
+    [lastShopView removeFromSuperview];
+    
+    // 恢复添加按钮的使用
+    self.addBtn.enabled = YES;
+    
+    if (self.shopCarView.subviews.count == 0) {
+        self.delBtn.enabled = NO;
+    }
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+
+```
+
