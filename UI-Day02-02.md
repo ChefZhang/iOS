@@ -197,3 +197,42 @@ UIImageView不光可以加载图片，还能播放帧动画
 
 ```
 
+没有声音好像无趣了一点，幸好有AVFoundation框架（不是放AV的框架哦！）
+
+* 引入AVFoundation框架
+```objc
+// 导入AVFoundation框架
+#import <AVFoundation/AVFoundation.h>
+```
+* 声明一个AVPlayer属性(AVAudioPlayer也是可以的呦)
+
+```objc
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+// 添加音乐播放器
+@property (nonatomic, strong) AVPlayer *player;
+// 也可以用这个
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+
+@end
+```
+* 添加音频文件
+
+![添加音频文件.png](http://upload-images.jianshu.io/upload_images/328309-271c82014df53287.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+* 点击按钮播放音乐
+```objc
+\- (IBAction)dazhao {
+    // 给播放器添加音乐文件
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"dazhao" withExtension:@"mp3"];
+    self.player = [[AVPlayer alloc] initWithURL:url];
+    // 播放
+    [self.player play];
+    
+    self.imageView.animationImages = [self loadImages:@"dazhao" withImageCounts:87];
+    [self playAnimation:5.3f withRepeatCount:1 andIsStand:NO];
+}
+```
+
+
