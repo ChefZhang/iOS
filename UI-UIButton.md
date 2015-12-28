@@ -22,3 +22,14 @@
 * 设置按钮在不同状态下的背景图片
 （为了保证高亮状态下的图片正常显示，必须设置按钮的type为custom）
 ![UIButton在main.storyBoard中.png](http://upload-images.jianshu.io/upload_images/328309-451691b6c8d71687.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 按钮的样式
+* 实际上，UIButton自带了很多种不同的样式
+![btn在storyboard中的样式.png](http://upload-images.jianshu.io/upload_images/328309-30e8c650044baff9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+* 在用代码创建按钮的同时指定按钮样式
+    * UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom]; 
+    * UIButtonTypeCustom：无类型，按钮的内容需要自定义
+    * UIButtonTypeDetailDisclosure： 
+    * UIButtonTypeInfoLight： 
+    * UIButtonTypeInfoDark： 
+    * UIButtonTypeContactAdd： 
