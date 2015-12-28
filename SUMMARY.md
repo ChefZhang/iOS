@@ -9,6 +9,7 @@
        * [类与对象](OC-Chp01-04.md)
        * [类的设计](OC-Chp01-05.md)
        * [第一个OC类](OC-Chp01-06.md)
+       * 对象方法的声明和实现
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
