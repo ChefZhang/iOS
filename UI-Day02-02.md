@@ -224,8 +224,9 @@ UIImageView不光可以加载图片，还能播放帧动画
 * 点击按钮播放音乐
 ```objc
  - (IBAction)dazhao {
-    // 给播放器添加音乐文件
+    // 赋值音频文件路径
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"dazhao" withExtension:@"mp3"];
+    // 将音频文件地址赋值给player
     self.player = [[AVPlayer alloc] initWithURL:url];
     // 播放
     [self.player play];
