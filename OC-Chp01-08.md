@@ -25,3 +25,13 @@
     * 类方法一般用于编写工具方法
 
 * 示例
+```objc
+//声明没有返回值的类方法
++ (void)method;
+//声明有返回值的类方法
++ (int)method;
+//声明有返回值有参数的类方法
++ (int)method: (int)var;
+//声明有返回值有多个参数的类方法
++ (int)method: (int)var1 andVar2: (int)var2;
+```
