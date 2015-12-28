@@ -8,5 +8,6 @@
 
 ### UIButton的状态
 * normal（普通状态）
+    * 相当于可以点击该按钮，但是没有点击 
     * 默认情况（Default）
     * 对应的枚举常量：UIControlStateNormal
