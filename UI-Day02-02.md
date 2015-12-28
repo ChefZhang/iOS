@@ -19,8 +19,8 @@
     * @interface UIImageView : UIView  
     * 因此拥有图片显示模式的属性contentMode
 
-### 小试牛刀
-* 添加图片
+### 添加图片
+* 
 
 ![添加图片.png](http://upload-images.jianshu.io/upload_images/328309-5b47c686f1002083.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -101,7 +101,7 @@
 ```   
 
 
-## 2.UIImageView的常用方法
+## 2.UIImageView的帧动画播放
 UIImageView不光可以加载图片，还能播放帧动画 
 ![lol巨魔.gif](http://upload-images.jianshu.io/upload_images/328309-5d230fd03842aa26.gif?imageMogr2/auto-orient/strip)
 
