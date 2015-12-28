@@ -14,7 +14,7 @@
        * [对象的存储细节](OC-Chp01-09.md)
        * [函数与方法对比](OC-Chp01-10.md)
        * [常见错误](OC-Chp01-11.md)
-   * OC-Chp2-Summary
+   * [OC-Chp2-Summary](OC-Chp2-Summary.md)
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
