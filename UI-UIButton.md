@@ -77,9 +77,12 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
 * UIImageView特点
     * 能显示图片，不能直接通过addTarget...方法监听点击
 
+
 * UILabel
     * 能显示文字，不能直接通过addTarget...方法监听点击
-* 选择
+
+***
+* 选取基本原则
     * 仅仅是显示数据，不需要点击，建议选择UIImageView、UILabel
 
 * 不仅显示数据，还需要监听点击，建议选择UIButton
