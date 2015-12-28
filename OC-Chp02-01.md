@@ -22,3 +22,31 @@ string = @"chefzhang";
 ```objc
 [NSString stringWithFormat:@"chefzhang体重%i岁了", 130];
 ```
+
+### 2.NSString字符串长度计算
+
+* 通过调用NSString类的对象方法 length 可以获得字符串的长度
+* 字符串长度是指该字符串中一共有多个字符(无论是中文还是英文)
+
+* 纯英文字符
+```objc
+    NSString *str = @"tom";
+    NSLog(@"length = %i", [str length]);
+    输出结果:3
+```
+    
+* 中英文混合
+```objc
+    NSString *str = @"tom杨";
+    NSLog(@"length = %i", [str length]);
+    输出结果:4
+```
+
+纯中文
+    NSString *str = @"李南江";
+    NSLog(@"length = %i", [str length]);
+    输出结果:3
+NSUInteger 就是 unsigned long
+
+源码：
+typedef unsigned long NSUInteger;
