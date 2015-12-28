@@ -89,5 +89,13 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
     * 同时显示2张图片：背景图片、内容图片,选择UIButton
     * 其实UIImageView、UILabel也可以通过手势识别器来监听
 
+### 7.基本的讲的也差不多了，看看能不能灵活运用吧
+![九宫格.gif](http://upload-images.jianshu.io/upload_images/328309-9813aede5dff5c74.gif?imageMogr2/auto-orient/strip)
 
+
+* 需求分析
+    * 一开始的界面，只有“添加按钮”可以被点击
+    * 点击“添加按钮”，添加内容(白色的实际上是按钮)，同时“删除按钮”可以被点击
+    * 在紫色的视图中，“白色按钮”达到6个之后，“添加按钮”再也不能被点击了
+    * 当白色按钮全部删除之后，“删除按钮”不能被点击
 
