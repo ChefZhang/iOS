@@ -33,3 +33,22 @@
     * UIButtonTypeInfoLight： 
     * UIButtonTypeInfoDark： 
     * UIButtonTypeContactAdd： 
+
+### UIButton的常见设置
+```objc
+ 设置按钮的文字
+ - (void)setTitle:(NSString *)title forState:(UIControlState)state;
+```
+
+* \- (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
+设置按钮的文字颜色
+
+* \- (void)setImage:(UIImage *)image forState:(UIControlState)state; 
+设置按钮内部的小图片
+
+* \- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
+设置按钮的背景图片
+
+
+
+
