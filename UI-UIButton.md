@@ -17,3 +17,8 @@
 * disabled（失效状态，不可用状态）
     * 如果enabled属性为NO，就是处于disable状态，代表按钮不可以被点击
     * 对应的枚举常量：UIControlStateDisabled
+    
+### 在main.storyboard中设置按钮的背景图片
+* 设置按钮在不同状态下的背景图片
+（为了保证高亮状态下的图片正常显示，必须设置按钮的type为custom）
+![UIButton在main.storyBoard中.png](http://upload-images.jianshu.io/upload_images/328309-451691b6c8d71687.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
