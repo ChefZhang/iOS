@@ -11,3 +11,6 @@
     * 相当于可以点击该按钮，但是没有点击 
     * 默认情况（Default）
     * 对应的枚举常量：UIControlStateNormal
+* highlighted（高亮状态）
+    * 按钮被按下去的时候（手指还未松开）
+    * 对应的枚举常量：UIControlStateHighlighted
