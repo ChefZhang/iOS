@@ -20,5 +20,5 @@ string = @"chefzhang";
 ```
 * 创建格式化字符串:占位符(由一个%加一个字符组成)
 ```objc
-[NSString stringWithFormat:@"chefzhang体重%i岁了", 30];
+[NSString stringWithFormat:@"chefzhang体重%i岁了", 130];
 ```
