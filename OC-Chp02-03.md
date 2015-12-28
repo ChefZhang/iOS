@@ -45,7 +45,6 @@ int main(int argc, const char * argv[])
 * 对象返回值的实质是返回指向该对象的指针，该对象是存储在堆内存中的。
 * 由于堆内存是由程序员管理的，所以它不会因为函数结束而被销毁
 
-
 ```objc
 @implementation Shop
 
