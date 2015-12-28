@@ -160,6 +160,8 @@ UIImageView不光可以加载图片，还能播放帧动画
 ```
 
 ### 知识点补充
+* 将文件拖入到项目中去
+![添加文件.png](http://upload-images.jianshu.io/upload_images/328309-0010ab3eb7928ec7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 两种添加图片方式的差别
 
 ![Assets.xcassets.png](http://upload-images.jianshu.io/upload_images/328309-bb3b6f47a93bd6e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -223,17 +225,50 @@ UIImageView不光可以加载图片，还能播放帧动画
 
 * 点击按钮播放音乐
 ```objc
+ // 方法一：
  - (IBAction)dazhao {
-    // 赋值音频文件路径
+    // 2.赋值音频文件路径
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"dazhao" withExtension:@"mp3"];
-    // 将音频文件地址赋值给player
+    // 1.将音频文件地址赋值给player
     self.player = [[AVPlayer alloc] initWithURL:url];
-    // 播放
+    // 3.播放
     [self.player play];
     
     self.imageView.animationImages = [self loadImages:@"dazhao" withImageCounts:87];
     [self playAnimation:5.3f withRepeatCount:1 andIsStand:NO];
  }
+ 
+ // 方法二：
+ - (IBAction)xiaozhao2 {
+    // 2.赋值音频文件路径
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"xiaozhao2" withExtension:@"mp3"];
+    // 3.创建错误信息对象，用于接受报错原因
+    NSError *errorInfo = nil;
+    // 1.将音频文件地址赋值给audioPlayer
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&errorInfo];
+    // 4.播放音乐
+    [self.audioPlayer play];
+    
+    self.imageView.animationImages = [self loadImages:@"xiaozhao2" withImageCounts:35];
+    [self playAnimation:1.2f withRepeatCount:1 andIsStand:NO];
+}
 ```
+* 注意：细心的同学应该看到了，我写的编号有点奇怪，是不是？！这是一个编程技巧，希望大家可以灵活运用
+    * 创建播放器 
+```objc
+ // 一开始先要创建一个播放器，就是alloc init，然后就出现选择初始化的方式，我就选择了这个，然后黄色部分就提示：需要一个非空的url地址
+ self.player = [AVPlayer alloc] initWithURL:<#(nonnull NSURL *)#>
+```
+    * 创建url地址
+    ```objc
+    // [NSBundle mainBundle] 是获取app的根路径
+    // 第一个黄色的意思是，填入需要查找的文件名称
+    // 第二个黄色的意思是，填入文件后缀
+    NSURL *url2 = [NSBundle mainBundle] URLForResource:<#(nullable NSString *)#> withExtension:<#(nullable NSString *)#>
+    // 也可以写成
+    // NSURL *url = [[NSBundle mainBundle] URLForResource:@"dazhao.mp3" withExtension:nil];
+    ```
+    
+
 
 
