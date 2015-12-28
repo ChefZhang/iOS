@@ -78,3 +78,6 @@
     // 2.0 添加到控制器的view中
     [self.view addSubview:label];
 ```
+* 示例图片
+
+![UILabel.png](http://upload-images.jianshu.io/upload_images/328309-789d7a95a1739d0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
