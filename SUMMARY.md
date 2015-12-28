@@ -19,6 +19,7 @@
        * [结构体成员变量](OC-Chp02-02.md)
        * [对象和方法之间的关系](OC-Chp02-03.md)
        * [pragma mark指令](OC-Chp02-04.md)
+       * 对象作为方法的参数连续传递
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
