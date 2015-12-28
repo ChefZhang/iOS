@@ -11,6 +11,7 @@
        * [第一个OC类](OC-Chp01-06.md)
        * [对象方法的声明和实现](OC-Chp01-07.md)
        * [类方法的声明和实现](OC-Chp01-08.md)
+       * 对象的存储细节
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
