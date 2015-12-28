@@ -17,3 +17,22 @@
     * 3.方法的声明必须在{}下面，不能写在{}中
 
 
+
+### 2.如何实现一个类
+* 格式
+
+```objc
+@implementation MyClass
+
+- (id)initWithString:(NSString *)aName
+{
+    //写代码处
+}
+
++ (MyClass *)myClassWithString:(NSString *)aName
+{
+    //写代码处
+}
+
+@end
+```
