@@ -49,10 +49,7 @@
 设置按钮的背景图片
  - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
 
-```
 
-
-```objc
 设置按钮的文字字体（需要拿到按钮内部的label来设置）
 btn.titleLabel.font = [UIFont systemFontOfSize:13];
 
