@@ -42,11 +42,15 @@ string = @"chefzhang";
     输出结果:4
 ```
 
-纯中文
-    NSString *str = @"李南江";
+* 纯中文
+```objc
+    NSString *str = @"杨春福";
     NSLog(@"length = %i", [str length]);
     输出结果:3
-NSUInteger 就是 unsigned long
+```
 
+* NSUInteger 就是 unsigned long
+```objc
 源码：
 typedef unsigned long NSUInteger;
+```
