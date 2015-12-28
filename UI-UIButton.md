@@ -14,3 +14,6 @@
 * highlighted（高亮状态）
     * 按钮被按下去的时候（手指还未松开）
     * 对应的枚举常量：UIControlStateHighlighted
+* disabled（失效状态，不可用状态）
+    * 如果enabled属性为NO，就是处于disable状态，代表按钮不可以被点击
+    * 对应的枚举常量：UIControlStateDisabled
