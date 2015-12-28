@@ -234,3 +234,6 @@ ViewController.m文件中
 
 ```
 
+### 8.知识点补充
+* 有时图层很多，把自己搞懵圈了，可以通过以下一个调试，查看自己的UI图层
+![查看图层.png](http://upload-images.jianshu.io/upload_images/328309-bb1b6975731c95b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
