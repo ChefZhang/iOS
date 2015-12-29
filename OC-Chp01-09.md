@@ -17,7 +17,7 @@
 * [p eat];表示给p所指向的对象发送一条eat消息,调用对象的eat方法,此时对象会顺着内部的isa指针找到存 储于类中的方法,执行。
 * isa是对象中的隐藏指针,指向创建这个对象的类。
 * 通过isa指针我们可以在运行的时候知道当前对象是属于那个Class（类）的 
-# 插图
+![isa指针.png](http://upload-images.jianshu.io/upload_images/328309-652714ed3d52f7f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3.使用一个类创建多个对象
 ```objc
