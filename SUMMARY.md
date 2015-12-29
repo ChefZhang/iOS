@@ -14,7 +14,7 @@
        * [对象的存储细节](OC-Chp01-09.md)
        * [函数与方法对比](OC-Chp01-10.md)
        * [常见错误](OC-Chp01-11.md)
-   * [OC-Chp2-Summary](OC-Chp2-Summary.md)
+   * [OC-Chp2-Summary](OC-Chp02-Summary.md)
        * [NSString类介绍及用法](OC-Chp02-01.md)
        * [结构体成员变量](OC-Chp02-02.md)
        * [对象和方法之间的关系](OC-Chp02-03.md)
