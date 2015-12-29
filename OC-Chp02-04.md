@@ -10,4 +10,8 @@
 
 * 一个类里我们总会有一些方法的功能与性质是相差不多的,你可能会有把方法们分组的想法。Xcode已经有了类似的支持,它就是 #pragma mark。
     * 分组: #pragma mark 分组(标识)名称 
-    # 插图
+    ![分组.png](http://upload-images.jianshu.io/upload_images/328309-418589b5856d32ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    * 分隔线: #pragma mark - 
+    ![分割线.png](http://upload-images.jianshu.io/upload_images/328309-a696da406fe0ed15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    * 分割线加分组: #pragma mark - 分组(标识)名称 
+    ![分割线加分组.png](http://upload-images.jianshu.io/upload_images/328309-dae0208fb22d3609.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
