@@ -8,8 +8,7 @@
 
 ***
 ### 1.如何声明一个类
-* 格式
-
+![声明格式.png](http://upload-images.jianshu.io/upload_images/328309-10511b2c706af717.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 # 插入图片
