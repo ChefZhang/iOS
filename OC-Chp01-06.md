@@ -45,8 +45,7 @@
 ### 3.如何创建一个对象
 * 用类的方式告诉计算机，我们需要一个什么样的对象，之后我们要在程序中使用这个对象，就必须先创建一个对象
 
-# 插入图片
-
+![创建对象.png](http://upload-images.jianshu.io/upload_images/328309-30b973ce1bd2b02d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 * 注意[Car new];做了三件事
