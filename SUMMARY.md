@@ -22,6 +22,7 @@
        * [对象作为方法的参数连续传递](OC-Chp02-05.md)
        * [OC多文件开发介绍](OC-Chp02-06.md)
    * [OC-Chp3-Summary](OC-Chp3-Summary.md)
+       * 封装
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
