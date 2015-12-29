@@ -17,8 +17,8 @@
 ### 2.@interface和@implementation的分工
 * @interface就好像暴露在外面的时钟表面
 * @implementation就好像隐藏在时钟内部的构造实现
+![interface和implementation.png](http://upload-images.jianshu.io/upload_images/328309-aef80fcc216728a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#  插图
 ###3.在OC中如何进行多文件开发？
 
 * 在工作中,通常把不同的类放到不同的文件中,每个类的声明和实现分开
