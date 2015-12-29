@@ -8,7 +8,7 @@
 ***
 ### 1.对象方法声明
 * 格式 
-
+![对象方法声明.png](http://upload-images.jianshu.io/upload_images/328309-a763eb62276aad99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 # 插入图片
 * 特征
     * 对象方法以-开头如 -(void)xx;
