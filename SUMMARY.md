@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [OC基础](OC-Summary.md)
    * [OC-1.OC简介](OC-1.OC简介.md)
-       * [1.1C和OC对比](1.1C和OC对比.md)
+       * [OC-1.1C和OC对比](OC-1.1C和OC对比.md)
        * [1.2第一个OC程序](1.2第一个OC程序.md)
        * [1.3面向对象思维](1.3面向对象思维.md)
        * [1.4类与对象](1.4类与对象.md)
