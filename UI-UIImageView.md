@@ -20,8 +20,7 @@
     * 因此拥有图片显示模式的属性contentMode
 
 ### 添加图片
-* 
-
+ 
 ![添加图片.png](http://upload-images.jianshu.io/upload_images/328309-5b47c686f1002083.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 代码参考
