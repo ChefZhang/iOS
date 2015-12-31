@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [OC基础](OC_Summary.md)
 * [UI基础](UI-Summary.md)
    * [UILabel](UI-UILabel.md)
    * [UIImageView](UI-UIImageView.md)
