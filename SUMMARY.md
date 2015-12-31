@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [OC基础](OC_Summary.md)
    * [OC-Chp2-Summary](OC-Chp02-Summary.md)
-       * [pragma mark指令](OC-Chp02-04.md)
        * [对象作为方法的参数连续传递](OC-Chp02-05.md)
        * [OC多文件开发介绍](OC-Chp02-06.md)
    * [OC-Chp3-Summary](OC-Chp3-Summary.md)
