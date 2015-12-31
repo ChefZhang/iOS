@@ -56,7 +56,7 @@
     * 使用对象调用方法就是OC中的消息机制
     * OC中调用方法的格式：[类名或者对象名 方法名]; 
 
-# 插入图片
+![调用方法.png](http://upload-images.jianshu.io/upload_images/328309-35699b0a03ad239d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 4.对象的注意点
 * 可以通过 对象->对象成员(注意声明属性为:@public) 的方式访问对象中的成员,
