@@ -6,7 +6,6 @@
        * [OC-1.1 C和OC对比](OC-1.1 C和OC对比.md)
        * [1.2第一个OC程序](1.2第一个OC程序.md)
        * [1.3面向对象思维](1.3面向对象思维.md)
-       * [1.4类与对象](1.4类与对象.md)
    * [OC-Chp2-Summary](OC-Chp02-Summary.md)
        * [NSString类介绍及用法](OC-Chp02-01.md)
        * [结构体成员变量](OC-Chp02-02.md)
