@@ -12,7 +12,6 @@
        * [对象方法的声明和实现](OC-Chp01-07.md)
        * [类方法的声明和实现](OC-Chp01-08.md)
        * [对象的存储细节](OC-Chp01-09.md)
-       * [函数与方法对比](OC-Chp01-10.md)
    * [OC-Chp2-Summary](OC-Chp02-Summary.md)
        * [NSString类介绍及用法](OC-Chp02-01.md)
        * [结构体成员变量](OC-Chp02-02.md)
