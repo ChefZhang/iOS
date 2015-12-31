@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [OC基础](OC_Summary.md)
    * [OC-Chp2-Summary](OC-Chp02-Summary.md)
-       * [NSString类介绍及用法](OC-Chp02-01.md)
        * [结构体成员变量](OC-Chp02-02.md)
        * [对象和方法之间的关系](OC-Chp02-03.md)
        * [pragma mark指令](OC-Chp02-04.md)
