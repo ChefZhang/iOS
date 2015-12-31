@@ -5,18 +5,24 @@
 目录：
 
 *  [1. OC简介](#1)
-*  [1.1 OC和C对比](#1.1)
-*  [1.2 第一个OC程序](#1.2)
-*  [1.3 面向对象思维](#1.3)
-*  [1.4 类与对象](#1.4)
-*  [1.5 类与设计](#1.5)
-*  [1.6 第一个OC类](#1.6)
-*  [1.7 对象方法的声明和实现](#1.7)
-*  [1.8 类方法的声明和实现](#1.8)
-*  [1.9 对象的存储细节](#1.9)
-*  [1.10 函数与方法对比](#1.10)
-*  [1.11 常见错误](#1.11)
-
+	*  [1.1 OC和C对比](#1.1)
+	*  [1.2 第一个OC程序](#1.2)
+	*  [1.3 面向对象思维](#1.3)
+	*  [1.4 类与对象](#1.4)
+	*  [1.5 类与设计](#1.5)
+	*  [1.6 第一个OC类](#1.6)
+	*  [1.7 对象方法的声明和实现](#1.7)
+	*  [1.8 类方法的声明和实现](#1.8)
+	*  [1.9 对象的存储细节](#1.9)
+	*  [1.10 函数与方法对比](#1.10)
+	*  [1.11 常见错误](#1.11)
+*  [2. OC开发基本知识](#2)
+	*  [2.1 NSString类介绍及用法](#2.1)
+	*  [2.2 结构体成员变量](#2.2)
+	*  [2.3 对象和方法之间的关系](#2.3)
+	*  [2.4 pragma mark指令](#2.4)
+	*  [2.5 对象作为方法的参数连续传递](#2.5)
+	*  [2.6 OC多文件开发介绍](#2.5)
 
 <h2 id="1">1. OC简介</h2>
 
@@ -510,6 +516,319 @@ Car *car2 = [Car new]
 * 9）成员变量和方法不能用static等关键字修饰,不要和c语言混淆
 * 10）类的实现可以写在mian函数后面,在使用之前只要有声明就可以
 
+***
+***
+***
 
 
-	
+<h2 id="2">2. OC开发基本知识</h2>
+
+<h3 id="2.1">2.1 NSString 类介绍及用法</h3>
+##### 1.NSString常见方法
+
+* NSString是Objective-C 中核心处理字符串的类之一
+
+* 创建常量字符串,注意使用“@“符号。
+```objc
+NSString *astring = @"This is a String!";
+```
+* 创建空字符串,给予赋值。
+```objc
+NSString *string = [NSString new];
+string = @"chefzhang";
+```
+* 创建格式化字符串:占位符(由一个%加一个字符组成)
+```objc
+[NSString stringWithFormat:@"chefzhang体重%i岁了", 130];
+```
+
+##### 2.NSString字符串长度计算
+
+* 通过调用NSString类的对象方法 length 可以获得字符串的长度
+* 字符串长度是指该字符串中一共有多个字符(无论是中文还是英文)
+
+* 纯英文字符
+```objc
+    NSString *str = @"tom";
+    NSLog(@"length = %i", [str length]);
+    输出结果:3
+```
+    
+* 中英文混合
+```objc
+    NSString *str = @"tom杨";
+    NSLog(@"length = %i", [str length]);
+    输出结果:4
+```
+
+* 纯中文
+```objc
+    NSString *str = @"杨春福";
+    NSLog(@"length = %i", [str length]);
+    输出结果:3
+```
+
+* NSUInteger 就是 unsigned long
+```objc
+源码：
+typedef unsigned long NSUInteger;
+```
+
+<h3 id="2.2">2.2 结构体成员变量</h3>
+##### 1.结构体成员变量
+
+* 设计一个”学生“类 1> 属性
+    * 姓名
+    * 生日
+    * 用结构体作为类的实例变量(生日)
+
+```objc
+\#import <Foundation/Foundation.h> //定义生日的结构体
+typedef struct{
+    int year;
+    int month;
+    int day;
+}MyDate;
+
+@interface Person : NSObject
+{
+    @public
+    NSString *_name;//定义姓名 MyDate _birthday;//定义生日
+}
+@end
+
+@implementation Person
+@end
+
+
+int main(int argc, const char * argv[]) {
+    Person *p = [Person new];
+    p->_name = @"sb";
+
+    //因为结构体已经初始化为0了,在次初始化就报错了,但是可以逐个赋值。
+    //p->_birthday = {1990,12,3};
+    p->_birthday.year = 2014;
+    p->_birthday.month = 05;
+    p->_birthday.day = 12;
+    NSLog(@"%@的生日是:%d年%d月%d 日",p->_name,p->_birthday.year,p->_birthday.month,p->_birthday.day);
+
+    //也可以整体赋值
+    MyDate de={1993,11,11};
+    p->_birthday = de;
+    NSLog(@"%@的生日是:%d年%d月%d 日",p->_name,p->_birthday.year,p->_birthday.month,p->_birthday.day);
+    return 0;
+}
+```
+
+<h3 id="2.3">2.3 对象和方法之间的关系</h3>
+##### 1.对象作为方法的参数
+
+* 对象作为方法参数传递是地址传递，因为对象是一个指针变量
+* 在方法内部，可以通过对象形参，访问该对象的成员变量(如果该对象的该成员变量的访问权限是public的)
+* 在方法内部，可以通过对象形参，调用该对象上的方法（给这个对象发送消息）
+
+```objc
+int main(int argc, const char * argv[])
+{
+    //    1.创建士兵对象
+    Soldier *s1 = [Soldier new];
+    s1->_name = @"jack";
+    s1->_life = 10;
+    s1->_level = kSoldierLevel1;
+
+    //    2.创建枪对象
+    Gun *gun = [Gun new];
+    gun->_bulletCount = 100;
+
+    //    3.射击
+    [s1 fireByGun:gun];
+}
+
+@implementation Soldier
+
+- (void)fireByGun:(Gun *)gun
+{
+    [gun shoot];
+}
+
+@end
+```
+
+##### 2.对象作为方法的返回值
+* 对象可以作为方法的返回值；
+* 对象返回值的实质是返回指向该对象的指针，该对象是存储在堆内存中的。
+* 由于堆内存是由程序员管理的，所以它不会因为函数结束而被销毁
+
+```objc
+@implementation Shop
+
+- (Gun *)buyGun
+{
+    Gun *gun = [Gun new];
+    gun->_bulletCount = 100;
+    return gun;
+}
+
+@end
+```
+
+<h3 id="2.4">2.4 pragma mark指令</h3>
+##### 1.#pragma mark指令的使用
+
+* 功能:简单来说就是对代码的分组,方便代码查找和导航用的 它们告诉Xcode编译器,要在编辑器窗格顶部的方法和函数弹出菜单中将代码分隔开。一些类(尤其是一些控制器类)可能很长,方法和函数弹出菜单可以便于代码导航。此时加入#pragma 指令(#pragma是一个编译指令)对代码进行逻辑组织很有效果。
+
+* 一个类里我们总会有一些方法的功能与性质是相差不多的,你可能会有把方法们分组的想法。Xcode已经有了类似的支持,它就是 #pragma mark。
+    * 分组: #pragma mark 分组(标识)名称 
+    ![分组.png](http://upload-images.jianshu.io/upload_images/328309-418589b5856d32ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    * 分隔线: #pragma mark - 
+    ![分割线.png](http://upload-images.jianshu.io/upload_images/328309-a696da406fe0ed15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    * 分割线加分组: #pragma mark - 分组(标识)名称 
+    ![分割线加分组.png](http://upload-images.jianshu.io/upload_images/328309-dae0208fb22d3609.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    
+<h3 id="2.5">2.5 对象作为方法的参数连续传递</h3>
+##### 1.对象作为方法的参数连续传递
+```objc
+实现功能:士兵开枪 枪射击子弹
+枪类:
+名称:Gun 属性:型号(_size),子弹个数(_bulletCount) 行为:射击
+人类
+名称:Soldier
+属性:姓名(_name) life level(等级) 行为:跑蹲开枪 跳
+```
+
+```objc
+\#import <Foundation/Foundation.h>
+/*
+ 士兵
+ 事物名称: 士兵(Soldier)
+ 属性:姓名(name), 身高(height), 体重(weight)
+ 行为:打枪(fire), 打电话(callPhone)
+ 
+ 枪
+ 事物名称:枪(Gun)
+ 属性:弹夹(clip) , 型号(model)
+ 行为:上弹夹(addClip)
+ 
+ 弹夹
+ 事物名称: 弹夹(Clip)
+ 属性:子弹(Bullet)
+ 行为:上子弹(addBullet)
+ */
+
+@interface Gun : NSObject
+{
+    @public
+    int _bullet; // 子弹
+}
+
+// 射击
+- (void)shoot;
+
+@end
+
+@implementation Gun
+- (void)shoot
+{
+    // 判断是否有子弹
+    if (_bullet > 0) {
+        
+        _bullet--;
+        NSLog(@"打了一枪 %i", _bullet);
+    }else
+    {
+        NSLog(@"没有子弹了, 请换弹夹");
+    }
+}
+@end
+
+
+
+@interface Soldier : NSObject
+{
+    @public
+    NSString *_name;
+    double _height;
+    double _weight;
+}
+//- (void)fire;
+- (void)fire:(Gun *)gun;
+
+@end
+
+@implementation Soldier
+
+/*
+- (void)fire
+{
+    NSLog(@"打了一枪");
+}
+ */
+
+//  Gun * g = gp
+- (void)fire:(Gun *)g
+{
+//    NSLog(@"打了一枪");
+    [g shoot];
+}
+
+@end
+
+int main(int argc, const char * argv[]) {
+    
+    // 1.创建士兵
+    Soldier *sp =[Soldier new];
+    sp->_name = @"屎太浓";
+    sp->_height = 1.88;
+    sp->_weight = 100.0;
+    
+    // 2.创建一把枪
+    Gun *gp = [Gun new];
+    gp->_bullet = 10;
+    
+    // 2.让士兵开枪
+//    [sp fire];
+    // 让对象作为方法的参数传递
+    [sp fire:gp]; // 地址
+    [sp fire:gp];
+    [sp fire:gp];
+    [sp fire:gp];
+    [sp fire:gp];
+    [sp fire:gp];
+    
+    return 0;
+}
+```
+
+<h3 id="2.6">2.6 OC多文件开发介绍</h3>
+##### 1.为什么要使用多文件
+
+* 一个真正的iOS项目中可能会有成百上类，如果这些类都写在一个文件中，那么文件就会很大，想找到自己需要类都变的异常困难，开发效率低下
+
+* 一个iOS项目可能会有多个人开发，如果多个人同时修改一个文件，那么就很可能会产生冲突，比如这个增加一个方法，那个人把这方法删掉了。另外就是当把多个人写功能合并起来的时候，也非常困难，写到一个文件中，无法顺畅的进行团队合作。
+
+##### 2.@interface和@implementation的分工
+* @interface就好像暴露在外面的时钟表面
+* @implementation就好像隐藏在时钟内部的构造实现
+![interface和implementation.png](http://upload-images.jianshu.io/upload_images/328309-aef80fcc216728a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#####3.在OC中如何进行多文件开发？
+
+* 在工作中,通常把不同的类放到不同的文件中,每个类的声明和实现分开
+    * 声明写在.h头文件中,
+    * 实现写在相应的.m文件中去,
+    * 类名是什么,文件名就是什么。
+```objc
+假设有两个类,分别是Person类和Dog类,则通常有下面五个文件:
+(1)Person.h Person类的声明文件
+(2)Person.m Person类的实现文件
+(3)Dog.h Dog类的声明文件
+(4)Dog.m Dog类的实现文件
+(5)Main.m 主函数(程序入口) 在主函数以及类的实现文件中要使用#import包含相应的头文件。
+```
+
+##### 4.使用多文件开发好处
+
+* 显著提高团队协作的效率
+* 提高程序的开发速度
+* 提高程序的可维护性
+* 提高代码的可读性
