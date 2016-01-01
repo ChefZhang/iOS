@@ -4849,6 +4849,7 @@ dict[@"name"] = @"jack";
 ```
 
 <h3 id="7.21">7.21 常见的结构体</h3>
+
 ##### 1.NSPoint和CGPoint
 - CGPoint和NSPoint是同义的
 
@@ -4915,6 +4916,7 @@ typedef struct CGRect CGRect;
     + CGRect
 
 <h3 id="7.22">7.22 NSNumber</h3>
+
 ##### 1.NSNumber基本概念
 - NSArray\NSDictionary中只能存放OC对象,不能存放int\float\double等基本数据类
 
@@ -4960,6 +4962,7 @@ typedef struct CGRect CGRect;
 
 
 <h3 id="7.23">7.23 NSValue</h3>
+
 ##### 1.NSValue基本概念
 - NSNumber是NSValue的子类, 但NSNumber只能包装数字类型
 
@@ -5000,6 +5003,7 @@ typedef struct CGRect CGRect;
 ```
 
 <h3 id="7.24">7.24 NSDate</h3>
+
 ##### 1.NSDate基本概念
 - NSDate可以用来表示时间, 可以进行一些常见的日期\时间处理
 
@@ -5105,6 +5109,7 @@ NSCalendar *calendar = [NSCalendar currentCalendar];
 ```    
 
 <h3 id="7.25">7.25 NSFileManager</h3>
+
 ##### 1.NSFileManager介绍
 - 什么是NSFileManager
     + 顾名思义, NSFileManager是用来管理文件系统的
@@ -5219,6 +5224,7 @@ NSCalendar *calendar = [NSCalendar currentCalendar];
 
 
 <h3 id="7.26">7.26 集合对象的内存管理</h3>
+
 ##### 1.集合对象的内存管理
 - 当一个对象加入到集合中,那么该对象的引用计数会+1
 - 当集合被销毁的时候,集合会向集合中的元素发送release消息
@@ -5266,6 +5272,7 @@ NSCalendar *calendar = [NSCalendar currentCalendar];
     + 2> 如果方法名是remove\delete开头,那么被移除的对象,计数器-1
 
 <h3 id="7.27">7.27 Copy</h3>
+
 ##### 1.copy基本概念
 - 什么是copy
     + Copy的字面意思是“复制”、“拷贝”，是一个产生副本的过程
@@ -5359,6 +5366,7 @@ NSCalendar *calendar = [NSCalendar currentCalendar];
 
 
 <h3 id="7.28">7.28 copy与内存管理</h3>
+
 ##### 1.copy与内存管理
 
 - 浅拷贝
@@ -5385,6 +5393,7 @@ NSCalendar *calendar = [NSCalendar currentCalendar];
 ```
 
 <h3 id="7.29">7.29 @property中的copy关键字</h3>
+
 ##### 1.@property中的copy的作用
 - 防止外界修改内部的值
 
@@ -5452,6 +5461,7 @@ NSCalendar *calendar = [NSCalendar currentCalendar];
     + 4> assgin : 基本数据类型、枚举、结构体(非OC对象)
 
 <h3 id="7.30">7.30 自定义的类实现copy操作</h3>
+
 ##### 1.自定义类实现copy操作
 - 让类遵守NSCopying协议
 - 实现 copyWithZone:方法,在该方法中返回一个对象的副本即可。
