@@ -2520,6 +2520,7 @@ int main(int argc, const char * argv[])
 
 
 <h3 id="5.5">5.5 内存管理原则</h3>
+
 ##### 1.内存管理原则
 - 苹果官方规定的内存管理原则
     + 谁创建谁release :
@@ -2586,6 +2587,7 @@ int main(int argc, const char * argv[])
 ```
 
 <h3 id="5.6">5.6 @property参数</h3>
+
 ##### 1.控制set方法的内存管理
 - retain ： release旧值，retain新值（用于OC对象）
 - assign ： 直接赋值，不做任何内存管理(默认，用于非OC对象类型)
@@ -2607,6 +2609,7 @@ int main(int argc, const char * argv[])
 - 注意: 不同类型的参数可以组合在一起使用
 
 <h3 id="5.7">5.7 @class</h3>
+
 ##### 1.@class基本概念
 - 作用
     + 可以简单地引用一个类
@@ -2686,6 +2689,7 @@ int main(int argc, const char * argv[])
 	
 
 <h3 id="5.9">5.9 autorelease基本使用</h3>
+
 ##### 1.autorelease基本概念
 - autorelease是一种支持引用计数的内存管理方式,只要给对象发送一条autorelease消息,会将对象放到一个自动释放池中,当自动释放池被销毁时，会对池子里面的**所有对象做一次release操作**
     + *注意,这里只是发送release消息,如果当时的引用计数(reference-counted)依然不为0,则该对象依然不会被释放。*
@@ -2754,6 +2758,7 @@ Person *p = [[[Person alloc] init] autorelease];
 ```
 
 <h3 id="5.10">5.10 autorelease注意事项</h3>
+
 ##### 1.autorelease使用注意
 - 并不是放到自动释放池代码中,都会自动加入到自动释放池
 
@@ -2845,6 +2850,7 @@ Person *p = [[[Person alloc] init] autorelease];
 ```
 
 <h3 id="5.11">5.11 ARC基本概念</h3>
+
 ##### 1.什么是ARC
 - Automatic Reference Counting,自动引用计数,即ARC,可以说是WWDC2011和iOS5所引入 的最大的变革和最激动人心的变化。ARC是新的LLVM 3.0编译器的一项特性,使用ARC,可以说一 举解决了广大iOS开发者所憎恨的手动内存管理的麻烦。
     + *手动管理内存, 可以简称MRC (Manual Reference Counting)*
@@ -2891,6 +2897,7 @@ __weak  Person *p = [[Person alloc] init];
 
 
 <h3 id="5.12">5.12 ARC快速入门</h3>
+
 ##### 1.ARC机制判断
 - OS5以后,创建项目默认的都是ARC
 
@@ -2914,6 +2921,7 @@ int main(int argc, const char * argv[]) {
 ```
 
 <h3 id="5.13">5.13 ARC下的内存管理</h3>
+
 ##### 1.ARC下单对象内存管理
 
 - 局部变量释放对象随之被释放
@@ -3010,6 +3018,7 @@ int main(int argc, const char * argv[]) {
 - assign : 用于基本数据类型, 跟MRC中的assign一样
 
 <h3 id="5.14">5.14 ARC和MRC兼容和转换</h3>
+
 ##### 1.ARC模式下如何兼容非ARC的类
 - 转变为非ARC -fno-objc-arc
 - 转变为ARC的, -f-objc-arc (不常用)
@@ -3025,6 +3034,7 @@ int main(int argc, const char * argv[]) {
 <h2 id="6">6. Category、Extension、Block和Protocol</h2>
 
 <h3 id="6.1">6.1 Category基本概念</h3>
+
 ##### 1.什么是Category
 - Category有很多种翻译: 分类 \ 类别 \ 类目 (一般叫分类)
 
