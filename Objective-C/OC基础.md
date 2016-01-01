@@ -1211,7 +1211,6 @@ Person.m文件
 self refers to the object receiving a message in objective-C programming.
 ```
     * super 并不是隐藏的参数，它只是一个“编译器指示符”，它和 self 指向的是相同的消息接收者
-
 ```objc
 super is a flag that tells the compiler to search for the method implementation in a very different place. It begins in the superclass of the class that defines the method where super appears.
 ```
@@ -1304,9 +1303,11 @@ Animal *an3 = [Animal new];
 ```
 
 <h2 id="4">4 实例变量修饰符、@property、构造方法和类工厂方法</h2>
+
 <h3 id="4.1">4.1 实例变量修饰符</h3>
 
 ##### 1.实例变量的作用域
+
 ![实例变量的作用域.png](http://upload-images.jianshu.io/upload_images/328309-c6945c2934444eb7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - 1)@public (公开的)在有对象的前,任何地方都可以直接访问。
@@ -1369,6 +1370,7 @@ Animal *an3 = [Animal new];
 - 当该方法使用NSLog(“%@”,self) 时候， 系统做了相关的优化，循坏调用3次后就会自动退出
 
 <h3 id="4.3">4.3 OC中的私有方法</h3>
+
 ##### 1.OC中的私有变量
 - 在类的实现,即.m文件中也可以声明成员变量,但是因为在其他文件中通常都只是包含头文件而不会包含实现文件,所以在.m文件中声明的成员变量是@private的。在.m中定义的成员变量不能和它的头文件.h中的成员变量同名,在这期间使用@public等关键字也是徒劳的。
 
@@ -1442,6 +1444,7 @@ Animal *an3 = [Animal new];
 
 
 <h3 id="4.5">4.5 @synthesize基本概念</h3>
+
 ##### 1.什么是@synthesize
 - @synthesize是编译器的指令
 - 什么是编译器的指令 ？
@@ -1521,6 +1524,7 @@ int main(int argc, const char * argv[]) {
 ```
 
 <h3 id="4.6">4.6 @property增强</h3>
+
 ##### 1.@property增强
 - 自从Xcode 4.x后，@property可以同时生成setter和getter的声明和实现
 
@@ -1594,6 +1598,7 @@ NSLog(@"age = %i", [p age]);
 ```
 
 <h3 id="4.8">4.8 id类型</h3>
+
 ##### 1.静态类型和动态类型
 - 静态类型
     + 将一个指针变量定义为特定类的对象时,使用的是静态类型,在编译的时候就知道这个指针变量所属的类,这个变量总是存储特定类的对象。
@@ -1693,6 +1698,7 @@ typedef struct objc_object *id;
 ```
 
 <h3 id="4.9">4.9 new方法实现原理</h3>
+
 ##### 1.new方法实现原理
 - 完整的创建一个可用的对象:Person *p=[Person new];
 - new方法的内部会分别调用两个方法来完成3件事情:
@@ -1843,6 +1849,7 @@ instancetype *p = [[person alloc] init];
 ```
 
 <h3 id="4.11">4.11 自定义构造方法</h3>
+
 ##### 1.自定义构造方法
 - 有时候仅仅靠重写构造方法（初始化方法），不能满足需求。比如一个班级中不可能所有学生的年龄都一样，这时候我们需要在创建某个学生的时候能够传入这个学生的年龄。这时候就需要来自定义构造函数（初始化函数）
 
@@ -1871,6 +1878,7 @@ instancetype *p = [[person alloc] init];
 ```
 
 <h3 id="4.12">4.12 继承中的自定义构造方法</h3>
+
 ##### 1.继承中的自定义构造方法
 
 - 不能在子类访问父类私有变量
@@ -1989,7 +1997,7 @@ instancetype *p = [[person alloc] init];
     [NSSet set];
     [NSSet setWithObject:<#(id)#>];
 ```
----
+
 
 ##### 2.子父类中的类工厂方法
 - 由于之类默认会继承父类所有的方法和属性, 所以类工厂方法也会被继承
@@ -2058,6 +2066,7 @@ int main(int argc, const char * argv[])
 
 
 <h3 id="4.14">4.14 类的本质</h3>
+
 ##### 1.类的本质
 - 类的本质其实也是一个对象(类对象)
 - 程序中第一次使用该类的时候被创建，在整个程序中只有一份。
@@ -2111,7 +2120,7 @@ Dog *g1 = [c new];
 
 ![类和对象的存储.png](http://upload-images.jianshu.io/upload_images/328309-74433f5a94af33c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
----
+
 
 ##### 5.OC实例对象 类对象 元对象之间关系
 - Objective-C是一门面向对象的编程语言。
@@ -2240,6 +2249,7 @@ int main(int argc, const char * argv[]) {
 ```
 
 <h3 id="4.16">4.16 SEL类型</h3>
+
 ##### 1.什么是SEL类型
 - SEL类型代表着方法的签名，在类对象的方法列表中存储着该签名与方法代码的对应关系
 
