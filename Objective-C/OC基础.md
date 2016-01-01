@@ -3081,6 +3081,7 @@ NewMethod
 ![分类模板.png](http://upload-images.jianshu.io/upload_images/328309-17ec43c94d56ed26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <h3 id="6.2">6.2 Category注意事项</h3>
+
 ##### 1.分类的使用注意事项
 - **分类只能增加方法, 不能增加成员变量**
 
@@ -3219,6 +3220,7 @@ int main(int argc, const char * argv[]) {
 - *对比分类, 就少了一个分类名称,因此也有人称它为”匿名分类”*
 
 <h3 id="6.4">6.4 Block基本概念</h3>
+
 ##### 1.什么是Block
 - Block是iOS中一种比较特殊的数据类型
 
@@ -3279,6 +3281,7 @@ block变量名(实参);
 ```
 
 <h3 id="6.5">6.5 typedef和Block</h3>
+
 ##### 1.函数指针回顾
 - 函数指针使用
 
@@ -3361,6 +3364,7 @@ int main(int argc, const char * argv[]) {
 ```
 
 <h3 id="6.6">6.6 Block注意事项</h3>
+
 ##### 1.Block注意事项
 - 在block内部可以访问block外部的变量
 
@@ -3411,6 +3415,7 @@ myBlock();
 
 
 <h3 id="6.7">6.7 Protocol基本概念</h3>
+
 ##### 1.protocol 基本概念
 - Protocol翻译过来, 叫做”协议”
     + 在写java的时候都会有接口interface这个概念,接口就是一堆方法的声明没有实现,而在OC里面Interface是一个类的头文件的声明,并不是真正意义上的接口的意思,在OC中接口是由一个叫做协议的protocol来实现的
@@ -3475,6 +3480,7 @@ myBlock();
 
 
 <h3 id="6.8">6.8 Protocol注意事项</h3>
+
 ##### 1.protocol 的使用注意
 - 1)Protocol:就一个用途,用来声明一大堆的方法(不能声明成员变量),不能写实现。
 
@@ -3586,6 +3592,7 @@ myBlock();
 ```
 
 <h3 id="6.9">6.9 Protocol类型限制</h3>
+
 ##### 1.protocol类型限制
 - 设定情景:
     + 某攻城狮A希望找一个会做饭、洗衣服的女生做女朋友,有国企工作的优先。
@@ -3613,6 +3620,7 @@ id<WifeCondition> wife = [[Person alloc] init];
 ```
 
 <h3 id="6.10">6.10 Protocol代理设计模式</h3>
+
 ##### 1.代理设计模式基本概念
 - 什么是设计模式
     + 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。毫无疑问，设计模式于己于他人于系统都是多赢的；设计模式使代码编制真正工程化；设计模式是软件工程的基石脉络，如同大厦的结构一样。
@@ -3711,6 +3719,7 @@ id<WifeCondition> wife = [[Person alloc] init];
 <h2 id="7">7. Foundation框架</h2>
 
 <h3 id="7.1">7.1 Foundation框架介绍</h3>
+
 ##### 1.Foundation框架介绍
 - 什么是框架?
     + 众多功能\API的集合
@@ -3762,6 +3771,7 @@ NSNumber : 数字
 
 
 <h3 id="7.2">7.2 NSString基本概念</h3>
+
 ##### 1.NSString基本概念
 - 什么是NSString?
     + 一个NSString对象就代表一个字符串(文字内容)
@@ -3791,6 +3801,7 @@ NSLog(@"str2 = %p, str4 = %p", str2, str4);
 ```
 
 <h3 id="7.3">7.3 NSString字符串读写</h3>
+
 ##### 1.直接读写文件中的字符
 - 从文件中读取
 
@@ -3901,6 +3912,7 @@ NSString *str = @"江哥";
 ```
 
 <h3 id="7.4">7.4 NSString字符串比较</h3>
+
 ##### 1.NSString大小写处理
 - 全部字符转为大写字母
     + \- (NSString *)uppercaseString;
@@ -3977,6 +3989,7 @@ NSString *str = @"江哥";
 
 
 <h3 id="7.5">7.5 NSString字符串搜索</h3>
+
 ##### 1.字符串搜索
 - \- (BOOL)hasPrefix:(NSString *)aString;
     + 是否以aString开头
@@ -4040,6 +4053,7 @@ NSRange range = NSMakeRange(7, 3);
 ```
 
 <h3 id="7.6">7.6 NSString字符串截取</h3>
+
 ##### 1.字符串的截取
 - \- (NSString *)substringFromIndex:(NSUInteger)from;
     + 从指定位置from开始(包括指定位置的字符)到尾部
@@ -4081,6 +4095,7 @@ NSRange range = NSMakeRange(7, 3);
 
 
 <h3 id="7.7">7.7 NSString字符串替换</h3>
+
 ##### 1.字符串的替换函数
 - \- (NSString *)stringByReplacingOccurrencesOfString:(NSString *)target withString:(NSString *)replacement;
     + 用replacement替换target
@@ -4121,6 +4136,7 @@ newStr =|http://520it.com/img/ljn.gif|
 ```
 
 <h3 id="7.8">7.8 NSString字符串读写</h3>
+
 ##### 1.NSString与路径
 - \- (BOOL)isAbsolutePath;
     + 是否为绝对路径
@@ -4200,6 +4216,7 @@ newStr =|http://520it.com/img/ljn.gif|
 ```
 
 <h3 id="7.9">7.9 NSString字符串与基本数据类型转换</h3>
+
 ##### 1.字符串索引
 - \- (NSUInteger)length;
     + 返回字符串的长度(有多少个文字)
@@ -4244,6 +4261,7 @@ newStr =|http://520it.com/img/ljn.gif|
 ```
 
 <h3 id="7.10">7.10 NSMutableString基本概念</h3>
+
 ##### 1.NSMutableString 基本概念
 - NSMutableString 类 继承NSString类,那么NSString 􏰀供的方法在NSMutableString中基本都可以使用,NSMutableString好比一个字符串链表,它可以任意的动态在字符串中添加字符 串 删除字符串 指定位置插入字符串,使用它来操作字符串会更加灵活。
 
@@ -4280,6 +4298,7 @@ newStr =|http://520it.com/img/ljn.gif|
 ```
 
 <h3 id="7.11">7.11 NSMutableString常用方法</h3>
+
 ##### 1.NSMutableString常用方法
 - \- (void)appendString:(NSString *)aString;
     + 拼接aString到最后面
@@ -4339,6 +4358,7 @@ NSMutalbeString *s1 = @”lnj”;
 ```
 
 <h3 id="7.12">7.12 NSMutableString练习</h3>
+
 ##### 1.NSMutableString练习
 - 从要求讲3个520it拼接在一起
 
@@ -4387,6 +4407,7 @@ NSMutalbeString *s1 = @”lnj”;
 ```
 
 <h3 id="7.13">7.13 NSArray基本概念</h3>
+
 ##### 1.NSArray的基本概念
 - 什么是NSArray?
     + NSArray是OC中的数组类,开发中建议尽量使用NSArray替代C语言中的数组
@@ -4476,6 +4497,7 @@ array[0];
 ```
 
 <h3 id="7.14">7.14 NSArray遍历</h3>
+
 ##### 1.NSArray的下标遍历
 
 ```objc
@@ -4523,6 +4545,7 @@ array[0];
 
 
 <h3 id="7.15">7.15 NSArray排序</h3>
+
 ##### 1.NSArray排序
 - Foundation自带类排序
 
@@ -4542,6 +4565,7 @@ NSArray *newArr = [arr sortedArrayUsingSelector:@selector(compare:)];
 ```
 
 <h3 id="7.16">7.16 NSArray文件读写</h3>
+
 ##### 1.NSArray数据写入到文件中
 
 ```objc
@@ -4559,6 +4583,7 @@ NSArray *newArr = [arr sortedArrayUsingSelector:@selector(compare:)];
 ```
 
 <h3 id="7.17">7.17 NSArray与字符串</h3>
+
 ##### 1.把数组元素链接成字符串
 - \- (NSString *)componentsJoinedByString:(NSString *)separator;
     + 这是NSArray的方法, 用separator作拼接符将数组元素拼接成一个字符串
@@ -4592,6 +4617,7 @@ lnj*lmj*jjj*xcq
 ```
 
 <h3 id="7.18">7.18 NSMutableArray基本概念</h3>
+
 ##### 1.NSMutableArray介绍
 - 什么是NSMutableArray
     + NSMutableArray是NSArray的子类
@@ -4665,6 +4691,7 @@ NSMutableArray *array = @[@"lnj", @"lmj", @"jjj"];
 ```
 
 <h3 id="7.19">7.19 NSDictionary基本概念</h3>
+
 ##### 1.NSDictionar基本概念
 - 什么是NSDictionary
     + NSDictionary翻译过来叫做”字典”
@@ -4756,6 +4783,7 @@ NSDictionary *newDict = [NSDictionary dictionaryWithContentsOfFile:@"/Users/LNJ/
 
 
 <h3 id="7.20">7.20 NSMutableDictionary基本概念</h3>
+
 ##### 1.NSMutableDictionary 基本概念
 - 什么是NSMutableDictionary
     + NSMutableDictionary是NSDictionary的子类
