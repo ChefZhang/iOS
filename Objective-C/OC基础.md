@@ -621,6 +621,7 @@ Car *car2 = [Car new]
 <h2 id="2">2. OC开发简介</h2>
 
 <h3 id="2.1">2.1 NSString 类介绍及用法</h3>
+
 ##### 1.NSString常见方法
 
 * NSString是Objective-C 中核心处理字符串的类之一
@@ -672,6 +673,7 @@ typedef unsigned long NSUInteger;
 ```
 
 <h3 id="2.2">2.2 结构体成员变量</h3>
+
 ##### 1.结构体成员变量
 
 * 设计一个”学生“类 1> 属性
@@ -718,6 +720,7 @@ int main(int argc, const char * argv[]) {
 ```
 
 <h3 id="2.3">2.3 对象和方法之间的关系</h3>
+
 ##### 1.对象作为方法的参数
 
 * 对象作为方法参数传递是地址传递，因为对象是一个指针变量
@@ -770,6 +773,7 @@ int main(int argc, const char * argv[])
 ```
 
 <h3 id="2.4">2.4 pragma mark指令</h3>
+
 ##### 1.#pragma mark指令的使用
 
 * 功能:简单来说就是对代码的分组,方便代码查找和导航用的 它们告诉Xcode编译器,要在编辑器窗格顶部的方法和函数弹出菜单中将代码分隔开。一些类(尤其是一些控制器类)可能很长,方法和函数弹出菜单可以便于代码导航。此时加入#pragma 指令(#pragma是一个编译指令)对代码进行逻辑组织很有效果。
@@ -783,6 +787,7 @@ int main(int argc, const char * argv[])
     ![分割线加分组.png](http://upload-images.jianshu.io/upload_images/328309-dae0208fb22d3609.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
     
 <h3 id="2.5">2.5 对象作为方法的参数连续传递</h3>
+
 ##### 1.对象作为方法的参数连续传递
 ```objc
 实现功能:士兵开枪 枪射击子弹
