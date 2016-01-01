@@ -799,7 +799,7 @@ int main(int argc, const char * argv[])
 ```
 
 ```objc
-\#import <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
 /*
  士兵
  事物名称: 士兵(Soldier)
@@ -949,6 +949,7 @@ int main(int argc, const char * argv[]) {
 
 ##### 3.为什么要进行封装?
 * 以下代码存在的问题?
+
 ```objc
 // 1成员变量是public的,也就是公开的,我们不能控制外界如何赋值, 外界有可能赋值一些脏数据
 @interface Gun : NSObject
@@ -962,10 +963,12 @@ int main(int argc, const char * argv[]) {
 // 封装:是指隐藏对象的属性和实现的细节,仅对外提供公共的访问方法
 ```
 
+
 * 类是数据与功能的封装，数据就是成员变量，功能就类方法或对象方法
 * 对数据的封装，也就是对成员变量的封装
 * 不封装的缺点：当一个类把自己的成员变量暴露给外部的时候,那么该类就失去对该成员变量的管理权，别人可以任意的修改你的成员变量。
 * 封装就是将数据隐藏起来,只能用此类的方法才可以读取或者设置数据,不可被外部任意修改是面向对象设计本质。这样降低了数据被误用的可能性 ，提高代码的灵活性!
+
 
 ##### 4.封装的好处
 * 好处
@@ -975,7 +978,9 @@ int main(int argc, const char * argv[]) {
 * 原则
 	* 将不需要对外提供的内容都隐藏起来,把属性都隐藏,提供公共的方法对其访问
 	
+
 <h3 id="3.1">3.1 getter/setter方法</h3>
+
 ##### 1.setter方法
 * 作用：用来设置成员变量，可以在方法里面过滤掉一些不合理的值
 * 命名规范：
@@ -1021,6 +1026,7 @@ int main(int argc, const char * argv[]) {
 	* 可以和一些其他的局部变量区分开来,下划线开头的变量,通常都是类的成员变量。当我看到以下划线开头变量，那么他一定是成员变量
 	
 <h3 id="3.2">3.2 自定义代码段</h3>
+
 ##### 1.如何自定义代码片段
 * 将代码拖拽到code区域 
 ![将代码拖拽到code区域.png](http://upload-images.jianshu.io/upload_images/328309-0baaba4e65b6b4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -1069,12 +1075,14 @@ int main(int argc, const char * argv[]) {
 点语法其实它的本质是调用了我们的setter和getter方法。没有setter和getter方法，就没有点语法！**
 
 <h3 id="3.4">3.4 self关键字</h3>
+
 ##### 1.类方法中的self
 * 在整个程序运行过程中，一个类有且仅有一个类对象。
 * 通过类名调用方法就是给这个类对象发送消息。
 * 类方法的self就是这个类对象
 * 在类方法中可以通过self来调用其他的类方法
 * 不能在类方法中去调用对象方法或成员变量，因为对象方法与成员变量都是属于具体的实例对象的。
+
 
 ```objc
 main.m文件
@@ -1096,6 +1104,8 @@ Person.m文件
 * 对象方法中self就是调用这个方法的当前对象。
 * 在对象方法中，可以通过self来调用本对象上的其他方法
 * 在对象方法中，可以通过self来访问成员变量
+
+
 ```objc
 main.m文件
 Person *p = [[Person alloc] initWithName:name];
@@ -1155,6 +1165,7 @@ Person.m文件
 	
 ##### 3.OC中如何实现继承
 * 在声明子类的时候，在子类名称后面通过：父类名称方式来实现继承	
+
 ```objc
 @interface 子类名称 : 父类名称
 
