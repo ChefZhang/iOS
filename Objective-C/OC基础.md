@@ -2435,6 +2435,7 @@ int main(int argc, const char * argv[])
 
 
 <h3 id="5.1">5.1 引用计数器</h3>
+
 ##### 1.什么是引用计数器
 - 系统是如何判断什么时候需要回收一个对象所占用的内存?
     + 根据对象的引用计数器
@@ -2474,6 +2475,7 @@ int main(int argc, const char * argv[])
 - 需要注意的是: release并不代表销毁\回收对象, 仅仅是计数器-1
 
 <h3 id="5.2">5.2 dealloc方法</h3>
+
 ##### 1.dealloc方法基本概念
 - 当一个对象的引用计数器值为0时,这个对象即将被销毁，其占用的内存被系统回收
 - 对象即将被销毁时系统会自动给对象发送一条dealloc消息
@@ -2489,6 +2491,7 @@ int main(int argc, const char * argv[])
 
 
 <h3 id="5.3">5.3 野指针\空指针</h3>
+
 ##### 1.僵尸对象
 - 已经被销毁的对象(不能再使用的对象)
 
@@ -2505,6 +2508,7 @@ int main(int argc, const char * argv[])
 
 
 <h3 id="5.4">5.4 Xcode设置</h3>
+
 ##### 1.如何关闭ARC功能
 - 要想手动调用retain、release等方法 , 就必须关闭ARC功能
 ![关闭arc.png](http://upload-images.jianshu.io/upload_images/328309-1121a56708b0377e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
