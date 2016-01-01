@@ -586,6 +586,7 @@ Car *car2 = [Car new]
 
 
 <h3 id="1.10">1.10 函数与方法对比</h3>
+
 * 对象方法:
     * (1)对象方法的实现只能写在@implementation...@end中,对象方法的声明只能写在 @interface...@end中间
     * (2)对象方法都以-号开头,类方法都以+号开头
@@ -602,6 +603,7 @@ Car *car2 = [Car new]
     
 
 <h3 id="1.11">1.11 常见错误</h3>
+
 * 1)@interface @end和@implementation @end不能嵌套包含
 * 2) OC是弱语法,可以只有@implementation,但实际开发中千万不要这样。
 * 3）漏写@end
