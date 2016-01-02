@@ -1,25 +1,53 @@
-# UIImageView
+# 4.UIImageView
 
-## 1.UIImageView的常用属性
+### 1.什么是UIImageView
+- UIKit框架提供了非常多的UI控件，但并不是每一个都很常用，有些控件可能1年内都用不上，有些控件天天用，比如UIButton、UILabel、UIImageView、UITableView等等
+- UIImageView极其常用，功能比较专一：显示图片
+
+##### 1.1 UIImageView的常用属性
 * UIImageView极其常用，功能比较专一：显示图片
- 
-    * @property(nonatomic,retain) UIImage *image; 
+
+```objc 
+@property(nonatomic,retain) UIImage *image; 
 显示的图片
 
-    * @property(nonatomic,copy) NSArray *animationImages; 
+@property(nonatomic,copy) NSArray *animationImages; 
 显示的动画图片
 
-    * @property(nonatomic) NSTimeInterval animationDuration; 
+@property(nonatomic) NSTimeInterval animationDuration; 
 动画图片的持续时间
 
-    * @property(nonatomic) NSInteger      animationRepeatCount; 
+@property(nonatomic) NSInteger      animationRepeatCount; 
 动画的播放次数（默认是0，代表无限播放）
+```
 
-* UIImageView继承自UIImage
-    * @interface UIImageView : UIView  
-    * 因此拥有图片显示模式的属性contentMode
 
-### 添加图片
+
+##### 1.2 UIImageView的常见方法
+
+```objc
+- (void)startAnimating; // 开始动画
+- (void)stopAnimating; // 停止动画
+- (BOOL)isAnimating; // 是否正在执行动画
+
+```
+
+- **注意**
+
+```objc
+UIImageView继承自UIImage
+    @interface UIImageView : UIView  
+    因此拥有图片显示模式的属性contentMode
+```
+
+##### 1.3 UIImage
+```objc
+一个UIImage对象代表一张图片，一般通过imageNamed:方法就可以通过文件名加载项目中的图片
+
+UIImage *image = [UIImage imageNamed:@"lufy"];
+```
+
+##### 1.4 添加图片
  
 ![添加图片.png](http://upload-images.jianshu.io/upload_images/328309-5b47c686f1002083.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -67,7 +95,7 @@
 ```    
 
 
-* 图片具有毛玻璃效果（应用场景：音乐播放软件）
+##### 1.5 图片具有毛玻璃效果（应用场景：音乐播放软件）
 
 ![毛玻璃效果.png](http://upload-images.jianshu.io/upload_images/328309-3c90247fed93227b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -100,11 +128,12 @@
 ```   
 
 
-## 2.UIImageView的帧动画播放
+### 2.UIImageView的帧动画播放
 UIImageView不光可以加载图片，还能播放帧动画 
 ![lol巨魔.gif](http://upload-images.jianshu.io/upload_images/328309-5d230fd03842aa26.gif?imageMogr2/auto-orient/strip)
 
 听起来是不是很酷炫，那么完成这样就需要以下方法了
+
 * \- (void)startAnimating; // 开始动画
 * \- (void)stopAnimating; // 停止动画
 * \- (BOOL)isAnimating; // 是否正在执行动画
@@ -158,7 +187,7 @@ UIImageView不光可以加载图片，还能播放帧动画
 
 ```
 
-### 知识点补充
+### 3.知识点补充
 * 将文件拖入到项目中去
 ![添加文件.png](http://upload-images.jianshu.io/upload_images/328309-0010ab3eb7928ec7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 最后一个不勾选的话，文件资源就不会被打包到app中
