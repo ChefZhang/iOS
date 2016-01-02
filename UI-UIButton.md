@@ -1,12 +1,13 @@
-# UIButton
+# 5.UIButton
 
-## 1.什么是按钮
+
+##### 1.什么是按钮
 * UIButton，俗称“按钮”
 * 一般情况下，点击某个控件后，会做出相应反应的都是按钮
 * 按钮的功能比较多，既能显示文字，又能显示图片，还能随时调整内部图片和文字的位置
 ![UIButton.png](http://upload-images.jianshu.io/upload_images/328309-c5567ef9c2706edc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### 2.UIButton的状态
+##### 2.UIButton的状态
 * normal（普通状态）
     * 相当于可以点击该按钮，但是没有点击 
     * 默认情况（Default）
@@ -19,12 +20,12 @@
     * 对应的枚举常量：UIControlStateDisabled
     
 
-### 3.在main.storyboard中设置按钮的背景图片
+##### 3.在main.storyboard中设置按钮的背景图片
 * 设置按钮在不同状态下的背景图片
 （为了保证高亮状态下的图片正常显示，必须设置按钮的type为custom）
 ![UIButton在main.storyBoard中.png](http://upload-images.jianshu.io/upload_images/328309-451691b6c8d71687.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### 4.按钮的样式
+##### 4.按钮的样式
 * 实际上，UIButton自带了很多种不同的样式
 ![btn在storyboard中的样式.png](http://upload-images.jianshu.io/upload_images/328309-30e8c650044baff9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 在用代码创建按钮的同时指定按钮样式
@@ -35,7 +36,8 @@
     * UIButtonTypeInfoDark： 
     * UIButtonTypeContactAdd： 
 
-### 5.UIButton的常见设置
+##### 5.UIButton的常见设置
+
 ```objc
  设置按钮的文字
  - (void)setTitle:(NSString *)title forState:(UIControlState)state;
@@ -66,7 +68,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
 
 ```
 
-### 6.UIButton、UIImageView、UILabel的选择
+##### 6.UIButton、UIImageView、UILabel的选择
 
 * UIButton特点
     * 既能显示文字，又能显示图片（能显示2张图片，背景图片、内容图片）
@@ -89,7 +91,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
     * 同时显示2张图片：背景图片、内容图片,选择UIButton
     * 其实UIImageView、UILabel也可以通过手势识别器来监听
 
-### 7.基本的讲的也差不多了，看看能不能灵活运用吧
+##### 7.基本的讲的也差不多了，看看能不能灵活运用吧
 ![九宫格.gif](http://upload-images.jianshu.io/upload_images/328309-9813aede5dff5c74.gif?imageMogr2/auto-orient/strip)
 
 
@@ -234,6 +236,6 @@ ViewController.m文件中
 
 ```
 
-### 8.知识点补充
+##### 8.知识点补充
 * 有时图层很多，把自己搞懵圈了，可以通过以下一个调试，查看自己的UI图层
 ![查看图层.png](http://upload-images.jianshu.io/upload_images/328309-bb1b6975731c95b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
